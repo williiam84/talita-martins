@@ -154,7 +154,7 @@ function confirmarPedido() {
     let lugar = document.getElementById("lugar").value;
     if (lugar === "Santana") taxaEntrega = 4;
     else if (lugar === "Maria Manteiga") taxaEntrega = 3;
-    else taxaEntrega = 2; // outros lugares
+    else taxaEntrega = 0; // outros lugares
 
     totalCarrinho += taxaEntrega;
     msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
