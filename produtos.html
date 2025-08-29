@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="midia/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="midia/ChatGPT Image 18 de ago. de 2025, 13_39_46.png" alt="">
+
+        <nav>
+            <a href="index.html">Home</a><a href="">Produtos</a><a href="#Footer3">Carrinho</a>
+            
+        </nav>
+
+    </header>
+  <section class="produtos">
+    <aside>
+        <div class="container1">
+            <img src="midia/pudim.jpg" alt="">
+            <h3>Pudim</h3>
+            <p>Creme gelado com sabor clássico de pudim, doce na medida certa.</p>
+          <h4>R$ 7,00</h4>
+          
+            <button class="btn-menos" onclick="decrement('qtd1')">-</button>
+    <input type="number" id="qtd1" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd1')">+</button>
+
+          <button onclick="adicionarCarrinho('Pudim', 7, document.getElementById('qtd1').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container2">
+            <img src="midia/moranguito1.jpeg" alt="">
+            <h3>Moranguito</h3>
+            <p>Chup-chup cremoso de morango, suave e refrescante.</p>
+           <h4>R$ 7,00</h4>
+          
+            <button class="btn-menos" onclick="decrement('qtd2')">-</button>
+    <input type="number" id="qtd2" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd2')">+</button>
+
+          <button onclick="adicionarCarrinho('Moranguito', 7, document.getElementById('qtd2').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container3">
+            <img src="midia/chupchup2.jpg" alt="">
+            <h3>Mousse de Maracujá</h3>
+            <p>Cremoso com a acidez equilibrada do maracujá.</p>
+           <h4>R$ 7,00</h4>
+          
+            <button class="btn-menos" onclick="decrement('qtd3')">-</button>
+    <input type="number" id="qtd3" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd3')">+</button>
+
+          <button id="clique"  onclick="adicionarCarrinho('Mousse de Maracujá', 7, document.
+        getElementById('qtd3').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container4">
+            <img src="midia/trufademorango.jpg" alt="">
+            <h3>Trufa de Morango</h3>
+            <p>Recheio de morango envolto em muito creme.</p>
+              
+            <button class="btn-menos" onclick="decrement('qtd4')">-</button>
+    <input type="number" id="qtd4" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd4')">+</button>
+
+            <h4>R$ 7,00</h4>
+          <button onclick="adicionarCarrinho('Trufa de Morango', 7, document.getElementById('qtd4').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container5">
+            <img src="midia/chupchup.jpg" alt="">
+            <h3>Limonada Suíça</h3>
+            <p>Refrescante, cítrico e levemente doce.</p>
+            <h4>R$ 7,00</h4>
+            
+              <button class="btn-menos" onclick="decrement('qtd5')">-</button>
+    <input type="number" id="qtd5" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd5')">+</button>
+
+          <button onclick="adicionarCarrinho('Limonada Suíça', 7, document.getElementById('qtd5').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container6">
+            <img src="midia/maracuja_n.jpg" alt="">
+            <h3>Trufa de Maracujá</h3>
+            <p>Recheio trufado com maracujá intenso e cremoso.</p>
+            <h4>R$ 7,00</h4>
+
+            <button class="btn-menos" onclick="decrement('qtd7')">-</button>
+    <input type="number" id="qtd7" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd7')">+</button>
+
+          <button onclick="adicionarCarrinho('Trufa de Maracujá', 7, document.getElementById('qtd6').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container7">
+            <img src="midia/moussedechocolate.jpeg" alt="">
+            <h3>Mousse de Chocolate</h3>
+            <p>Cremoso, doce e irresistível para os chocólatras.</p>
+             
+          <button class="btn-menos" onclick="decrement('qtd7')">-</button>
+    <input type="number" id="qtd7" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd7')">+</button>
+
+          <button onclick="adicionarCarrinho('Mousse de Chocolate', 7, document.getElementById('qtd7').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container8">
+            <img src="" alt="">
+            <h3>Ninho Trufado</h3>
+            <p>Creme de leite Ninho com recheio extra de Nutella.</p>
+             <h4>R$ 7,00</h4>
+               
+            <button class="btn-menos" onclick="decrement('qtd8')">-</button>
+    <input type="number" id="qtd8" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd8')">+</button>
+
+          <button onclick="adicionarCarrinho('Ninho Trufado', 7, document.getElementById('qtd8').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container9">
+            <img src="midia/kinder.jpg" alt="">
+            <h3>Kinder Bueno</h3>
+            <p>Inspirado no famoso chocolate, cremoso.</p>
+             <h4>R$ 7,00</h4>
+          
+              <button class="btn-menos" onclick="decrement('qtd9')">-</button>
+    <input type="number" id="qtd9" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd9')">+</button>
+
+          <button onclick="adicionarCarrinho('Kinder Bueno', 7, document.getElementById('qtd9').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="container10">
+            <img src="midia/pacocacremosa.jpeg" alt="">
+            <h3>Paçoca Cremosa</h3>
+            <p>Sabor de amendoim doce e macio, com toque caseiro.</p>
+            <h4>R$ 7,00</h4>
+            
+            <button class="btn-menos" onclick="decrement('qtd10')">-</button>
+    <input type="number" id="qtd10" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd10')">+</button>
+
+          <button onclick="adicionarCarrinho('Paçoca Cremosa', 7, document.getElementById('qtd10').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+        <div class="container11">
+            <img src="midia/oreo.jpg" alt="">
+            <h3>Oreo</h3>
+            <p>Creme gelado com pedaços crocantes do biscoito mais famoso do mundo</p>
+            <h4>R$ 8,00</h4>
+              
+            <button class="btn-menos" onclick="decrement('qtd24')">-</button>
+    <input type="number" id="qtd24" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd24')">+</button>
+
+          <button onclick="adicionarCarrinho('Oreo', 8, document.getElementById('qtd24').value)"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+       <div class="caixa1">
+         <img src="midia/ourobranco.jpg" alt="">
+            <h3>Ouro Branco</h3>
+            <p>Cremoso inspirado no bombom clássico, sabor único.</p>
+            <h4>R$ 8,00</h4>
+              
+            <button class="btn-menos" onclick="decrement('qtd11')">-</button>
+    <input type="number" id="qtd11" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd11')">+</button>
+
+          <button onclick="adicionarCarrinho('Ouro Branco', 8, document.getElementById('qtd11').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa2">
+         <img src="midia/chupchup3.jpg" alt="">
+            <h3>Ninho Rosé</h3>
+            <p>Leite Ninho com pedaços e calda de morango.</p>
+            <h4>R$ 8,00</h4>
+              
+              <button class="btn-menos" onclick="decrement('qtd12')">-</button>
+    <input type="number" id="qtd12" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd12')">+</button>
+
+          <button onclick="adicionarCarrinho('Ninho Rosé', 8, document.getElementById('qtd12').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa3">
+         <img src="midia/docedeleite.jpeg" alt="">
+            <h3>Doce de Leite Trufado</h3>
+            <p>Doce de leite encorpado com toque extra de chocolate.</p>
+            <h4>R$ 8,00</h4>
+              
+              <button class="btn-menos" onclick="decrement('qtd13')">-</button>
+    <input type="number" id="qtd13" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd13')">+</button>
+
+          <button onclick="adicionarCarrinho('Doce de Leite Trufado', 8, document.getElementById('qtd13').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa4">
+          <img src="midia/prestigio.jpeg" alt="">
+            <h3>Prestígio</h3>
+            <p>Mistura perfeita de coco e chocolate.</p>
+            <h4>R$ 8,00</h4>
+             
+            <button class="btn-menos" onclick="decrement('qtd14')">-</button>
+    <input type="number" id="qtd14" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd14')">+</button>
+
+          <button onclick="adicionarCarrinho('Prestígio', 8, document.getElementById('qtd14').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa5">
+          <img src="midia/cocadacremosa.jpeg" alt="">
+            <h3>Cocada Cremosa</h3>
+            <p>Sabor caseiro de coco, doce e cremoso.</p>
+            <h4>R$ 8,00</h4>
+              
+            <button class="btn-menos" onclick="decrement('qtd15')">-</button>
+    <input type="number" id="qtd15" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd15')">+</button>
+
+          <button onclick="adicionarCarrinho('Cocada Cremosa', 8, document.getElementById('qtd15').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa6">
+          <img src="midia/caputino.jpeg" alt="">
+            <h3>Capuccino</h3>
+            <p>Café suave com chocolate e creme, levemente adocicado.</p>
+            <h4>R$ 8,00</h4>
+             
+            <button class="btn-menos" onclick="decrement('qtd16')">-</button>
+    <input type="number" id="qtd16" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd16')">+</button>
+
+          <button onclick="adicionarCarrinho('Capuccino', 8, document.getElementById('qtd16').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+
+       <div class="caixa7">
+          <img src="" alt="">
+            <h3>Torta de Limão</h3>
+            <p>Cremoso com toque cítrico do limão e leve sabor de biscoito.</p>
+            <h4>R$ 8,00</h4>
+             
+            <button class="btn-menos" onclick="decrement('qtd17')">-</button>
+    <input type="number" id="qtd17" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd17')">+</button>
+
+          <button onclick="adicionarCarrinho('Torta de Limão', 8, document.getElementById('qtd17').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+
+       <div class="caixa8">
+          <img src="midia/trufadeuva.jpeg" alt="">
+            <h3>Trufa de Uva</h3>
+            <p>Creme trufado com sabor intenso de uva e com chocolate branco</p>
+            <h4>R$ 8,00</h4>
+             
+            <button class="btn-menos" onclick="decrement('qtd18')">-</button>
+    <input type="number" id="qtd18" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd18')">+</button>
+
+          <button onclick="adicionarCarrinho('Trufa de Uva', 8, document.getElementById('qtd18').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa9">
+          <img src="midia/caribe.jpeg" alt="">
+            <h3>Caribe</h3>
+            <p>Combinação tropical com coco e banana</p>
+            <h4>R$ 8,00</h4>
+              
+            <button class="btn-menos" onclick="decrement('qtd19')">-</button>
+    <input type="number" id="qtd19" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd19')">+</button>
+
+          <button onclick="adicionarCarrinho('Caribe', 8, document.getElementById('qtd19').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="caixa10">
+          <img src="midia/romeuejulieta.jpeg" alt="">
+            <h3>Romeu e Julieta</h3>
+            <p>Clássico de goiabada com queijo cremoso.</p>
+            <h4>R$ 8,00</h4>
+             
+            <button class="btn-menos" onclick="decrement('qtd20')">-</button>
+    <input type="number" id="qtd20" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd20')">+</button>
+
+          <button onclick="adicionarCarrinho('Romeu e Julieta', 8, document.getElementById('qtd20').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+       <div class="premium">
+           <img src="midia/Tablito.jpeg" alt="">
+            <h3>Tablito</h3>
+            <p>Inspirado no famoso sorvete, com chocolate e crocância.</p>
+            <h4>R$ 10,00</h4>
+              
+              <button class="btn-menos" onclick="decrement('qtd21')">-</button>
+    <input type="number" id="qtd21" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd21')">+</button>
+
+          <button onclick="adicionarCarrinho('Tablito', 10, document.getElementById('qtd21').value)"><i class="fa-solid fa-cart-plus"></i></button>
+       </div>
+
+        <div class="premium1">
+  <img src="midia/ferrerorocher.jpeg" alt="">
+  <h3>Ferrero Rocher</h3>
+  <p>Creme de avelã com chocolate, sofisticado e marcante.</p>
+  <h4>R$ 10,00</h4>
+
+  <!-- Input com + e - -->
+
+    <button class="btn-menos" onclick="decrement('qtd22')">-</button>
+    <input type="number" id="qtd22" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd22')">+</button>
+
+
+  <!-- Botão de adicionar ao carrinho -->
+  <button onclick="adicionarCarrinho('Ferrero Rocher', 10, document.getElementById('qtd22').value)">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+</div>
+
+            <div class="premium2">
+           <img src="midia/ovomaltine.jpeg" alt="">
+            <h3>Ovomaltine Trufado</h3>
+            <p>Mistura cremosa com chocolate e crocantes de Ovomaltine.</p>
+            <h4>R$ 13,00</h4>
+             
+              <button class="btn-menos" onclick="decrement('qtd23')">-</button>
+    <input type="number" id="qtd23" value="1" min="1">
+    <button class="btn-plus" onclick="increment('qtd23')">+</button>
+
+          <button onclick="adicionarCarrinho('Ovomaltine Trufado', 13, document.getElementById('qtd23').value)"><i class="fa-solid fa-cart-plus"></i></button>
+
+       </div>
+    </aside>
+  </section>
+  <footer id="Footer3" class="footer3">
+    <ul id="Carrinho"></ul>
+    <p class="txt">Total: R$ <span id="total">0</span></p>
+
+    <div class="forma-pagamento">
+        <label for="pagamento">Forma de pagamento:</label>
+        <select id="pagamento" name="pagamento">
+            <option value="">Selecione</option>
+            <option value="pix">PIX</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="debito">Cartão de Débito</option>
+            <option value="dinheiro">Dinheiro</option>
+        </select>
+    </div> 
+
+    <div id="trocoDiv" style="display:none;">
+        <label for="troco">Precisa de troco para:</label>
+        <input class="inp" type="text" id="troco" placeholder="Ex: 50 reais">
+    </div>
+
+    <p id="res"></p>
+    <button class="finalizar" id="finalizar">Finalizar Pedido</button>
+</footer>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="fecharPopup" class="fechar">&times;</span>
+    <h2 class="txth2">Finalizar Pedido</h2>
+
+   <br>
+    <input type="radio" name="tipoEntrega" value="retirada" checked> Retirada<br>
+    <input type="radio" name="tipoEntrega" value="entrega"> Entrega<br><br>
+
+    <div id="enderecoCampos" style="display:none;">
+  <div class="santana-mariamanteiga">
+    <label for="lugar">Mora por aqui?</label>
+    <select id="lugar" name="lugar">
+      <option value="">Selecione...</option>
+      <option value="Maria Manteiga">Maria Manteiga</option>
+      <option value="Santana">Santana</option>
+      <option value="nao">Não</option>
+    </select>
+  </div>
+</div>
+
+     
+      
+    <input type="text" id="nome" placeholder="Seu nome">
+      <label for="rua" class="rua">Rua:</label>
+      <input type="text" id="rua" placeholder="Digite sua rua"><br><br>
+      <label class="bairro" for="bairro">Bairro:</label>
+      <input type="text" id="bairro" placeholder="Digite seu bairro"><br><br>
+      <label class="number" for="numero">Número:</label>
+      <input type="text" id="numero" placeholder="Número da casa"><br><br>
+       <label class="Ponto" for="referencia">Ponto de Referência:</label>
+    <input type="text" id="referencia" placeholder="Ex: Perto da padaria">
+    </div>
+
+    <button onclick="confirmarPedido()">Confirmar Pedido</button>
+  </div>
+</div>
+  <h1 class="txth1">TRADICIONAIS</h1>
+
+ <div class="tradicionais">
+<div class="produto">
+  <h3>Maracujá</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdMaracuja')">-</button>
+  <input type="number" id="qtdMaracuja" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdMaracuja')">+</button>
+
+  <button onclick="adicionarCarrinho('Maracujá', 2, document.getElementById('qtdMaracuja').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+</div>
+
+  <div class="produto1">
+    <h3>coco</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdcoco')">-</button>
+  <input type="number" id="qtdcoco" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdcoco')">+</button>
+
+  <button onclick="adicionarCarrinho('coco', 2, document.getElementById('qtdcoco').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto2">
+    <h3>Limão</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdLimao')">-</button>
+  <input type="number" id="qtdLimao" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdLimao')">+</button>
+
+  <button onclick="adicionarCarrinho('Limão', 2, document.getElementById('qtdLimao').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button></div>
+
+
+  <div class="produto3">
+    <h3>Leite condesado</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdLeite')">-</button>
+  <input type="number" id="qtdLeite" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdLeite')">+</button>
+
+  <button onclick="adicionarCarrinho('Leite condesado', 2, document.getElementById('qtdLeite').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto4">
+    <h3>Amendoim</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdamendoim')">-</button>
+  <input type="number" id="qtdamendoim" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdamendoim')">+</button>
+
+  <button onclick="adicionarCarrinho('Amendoim', 2, document.getElementById('qtdamendoim').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto5">
+
+    <h3>Ceu Azul</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdCeuazul')">-</button>
+  <input type="number" id="qtdCeuazul" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdCeuazul')">+</button>
+
+  <button onclick="adicionarCarrinho('Ceu Azul', 2, document.getElementById('qtdCeuazul').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto6">
+    <h3>Tapioca com coco</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdTapioca')">-</button>
+  <input type="number" id="qtdTapioca" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdTapioca')">+</button>
+
+  <button onclick="adicionarCarrinho('tapioca com coco', 2, document.getElementById('qtdTapioca').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto7">
+     <h3>Chiclete</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdChiclete')">-</button>
+  <input type="number" id="qtdChiclete" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdChiclete')">+</button>
+
+  <button onclick="adicionarCarrinho('tapioca com coco', 2, document.getElementById('qtdChiclete').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto8">
+     <h3>Morango</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdMorango')">-</button>
+  <input type="number" id="qtdMorango" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdMorango')">+</button>
+
+  <button onclick="adicionarCarrinho('Morango', 2, document.getElementById('qtdMorango').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto9">
+  <h3>Goiaba</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdGoiaba')">-</button>
+  <input type="number" id="qtdGoiaba" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdGoiaba')">+</button>
+
+  <button onclick="adicionarCarrinho('Goiaba', 2, document.getElementById('qtdGoiaba').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+</div>
+
+  <div class="produto10">
+     <h3>Chocolate</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdchocolate')">-</button>
+  <input type="number" id="qtdchocolate" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdchocolate')">+</button>
+
+  <button onclick="adicionarCarrinho('Chocolate', 2, document.getElementById('qtdchocolate').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+  <div class="produto11">
+     <h3>Cupuaçu</h3>
+  <h4>R$ 2,00</h4>
+
+  <button class="btn-menos" onclick="decrement('qtdcupuacu')">-</button>
+  <input type="number" id="qtdcupuacu" value="1" min="1">
+  <button class="btn-plus" onclick="increment('qtdcupuacu')">+</button>
+
+  <button onclick="adicionarCarrinho('Cupuaçu', 2, document.getElementById('qtdcupuacu').value)" class="cart">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+
+    <div class="produto12">
+     <h3>Biscoito</h3>
+  <h4>R$ 2,00</h4>
+
+      <div class="aviso">Esgotado</div>
+
+  <button class="btn-menos" disabled>-</button>
+  <input type="number" id="qtdcupuacu" value="0" disabled>
+  <button class="btn-plus" disabled>+</button>
+
+  <button disabled class="cart esgotado-btn">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+  </div>
+  </div>
+  <div class="nada"></div>
+ <script src="script.js"></script>     
+</body>
+</html>

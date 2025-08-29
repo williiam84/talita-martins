@@ -1,0 +1,6092 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+     /*color: #F5C144;*/
+    background-color: #651616;
+}
+*{
+    font-family: "Poppins", sans-serif;
+}
+form {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 400px;
+    background-color: white;
+    border-radius: 15px;
+    width: 300px;
+    height: 500px;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+}
+.inp {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: "Poppins", sans-serif;
+}
+.inp2{
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 150px;
+    font-family: "Poppins", sans-serif;
+}
+.senha {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 50%;
+    top: 250px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    font-family: "Poppins", sans-serif;
+}
+form h1 {
+    position: absolute;
+    top: 10px;
+    color: #F5C144;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn {
+    position: absolute;
+    color: #000;
+    background-color: #F5C144;
+    width: 200px;
+    height: 25px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+.btn:hover{
+ background-color: white;
+ cursor: pointer;
+}
+.res {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    top: 500px;
+    font-family: "Poppins", sans-serif;
+}
+/*tela inicial*/
+ header {
+    position: fixed;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    border: 1px solid black;
+ }
+ header img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+ }
+ header a {
+    text-decoration: none;
+    color: black;
+     animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+ }
+ header nav {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    left: 70%;
+    top: 40%;
+ }
+ .container {
+    background-color: #fff;
+    width: 100%;
+    height: 850px;
+    z-index: 1;
+ }
+ .container h2 {
+    position: absolute;
+    color: black;
+    left: 50%;
+    top: 250px;
+    transform: translate(-50%, -50%);
+    font-size: 40pt;
+     animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+ }
+ .container p {
+    position: absolute;
+    color: black;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%, -50%);
+     animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+ }
+ .container button {
+    position: absolute;
+    border: none;
+    background-color: #651616;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 550px;
+     animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+ }
+  .container button:hover {
+
+    background-color: #F7D358;
+    color: #651616;
+    animation: up 2s linear;
+    transition: 2s;
+    top: 500px;
+    border: none;
+  }
+.section1 h2 {
+    position: absolute;
+    top: 900px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+    color: #F7D358;
+}
+.section1 p {
+    position: absolute;
+    top: 1000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15pt;
+    color: #FFF;
+}
+.box1 {
+    position: absolute;
+    width: 550px;
+    height: 950px;
+    background-color: #FFF;
+    border-radius: 15px;
+    top: 1500px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+      animation: entrada 3s linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.box1 img {
+    position: absolute;
+    top: 275px;
+    width: 550px;
+    height: 550px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 15px;
+}
+.box1 .price {
+    position: absolute;
+    top: 900px;
+    left: 35px;
+}
+.box1 h3 {
+    position: absolute;
+    left: 5%;
+    top: 650px;
+    font-size: 25px;
+}
+.box1 p {
+    position: absolute;
+    top: 700px;
+    left: 5%;
+}
+.box1 .btn1 {
+    position: absolute;
+    top: 800px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: white;
+     background-color: #651616;
+     border: none;
+}
+.box1 .btn2 {
+    position: absolute;
+    top: 850px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: #F7D358;
+     background-color: #fff;
+     border: 1px solid black;
+}
+.box2 {
+     position: absolute;
+    width: 550px;
+    height: 950px;
+    background-color: #FFF;
+    border-radius: 15px;
+    top: 3500px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+      animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.box2 img {
+    position: absolute;
+    top: 275px;
+    width: 550px;
+    height: 550px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 15px;
+}
+.box2 .price2 {
+    position: absolute;
+    top: 900px;
+    left: 35px;
+}
+.box2 h3 {
+    position: absolute;
+    left: 5%;
+    top: 650px;
+    font-size: 25px;
+}
+.box2 p {
+    position: absolute;
+    top: 700px;
+    left: 5%;
+}
+.box2 .btn1 {
+    position: absolute;
+    top: 800px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: white;
+     background-color: #651616;
+     border: none;
+}
+.box2 .btn2 {
+    position: absolute;
+    top: 850px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: #F7D358;
+     background-color: #fff;
+     border: 1px solid black;
+}
+.box3 {
+    position: absolute;
+    width: 550px;
+    height: 950px;
+    background-color: #FFF;
+    border-radius: 15px;
+    top: 2500px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+      animation: entrada linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.box3 img {
+    position: absolute;
+    top: 275px;
+    width: 550px;
+    height: 550px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 15px;
+}
+.box3 .price3 {
+    position: absolute;
+    top: 900px;
+    left: 35px;
+}
+.box3 h3 {
+    position: absolute;
+    left: 5%;
+    top: 650px;
+    font-size: 25px;
+}
+.box3 p {
+    position: absolute;
+    top: 700px;
+    left: 5%;
+}
+.box3 .btn1 {
+    position: absolute;
+    top: 800px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: white;
+     background-color: #651616;
+     border: none;
+}
+.box3 .btn2 {
+    position: absolute;
+    top: 850px;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+     transform:translate(-50%, -50%);
+     border-radius: 15px;
+     color: #F7D358;
+     background-color: #fff;
+     border: 1px solid black;
+}
+.section2 {
+    position: absolute;
+    top: 4100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F7D358;
+    font-size: 30pt;
+}
+.avaliacao1 {
+    position: absolute;
+    top: 350px;
+    background-color: #333;
+    width: 100%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    border-radius: 10px;
+     animation: entrada  linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.avaliacao2 {
+    position: absolute;
+    top: 500px;
+    background-color: #333;
+    width: 100%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    border-radius: 10px;
+     animation: entrada  linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.avaliacao3 {
+    position: absolute;
+    top: 650px;
+    background-color: #333;
+    width: 100%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    border-radius: 10px;
+     animation: entrada  linear;
+    animation-timeline: view();
+    animation-range: entry 70%;
+}
+.footer1 {
+    position: absolute;
+    top: 5000px;
+    background-color: #F7D358;
+    width: 100%;
+    height: 500px;
+}
+.footer1 h2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+    top: 35%;
+}
+.footer1 p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 55%
+}
+.footer1 .btn1 {
+    position: absolute;
+    left: 35%;
+    background-color: #651616;
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    top: 75%;
+}
+.footer1 .btn2 {
+    position: absolute;
+    left: 55%;
+    background-color: #fff;
+    color: black;
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 75%;
+}
+.footer2 {
+    position: absolute;
+    top: 5500px;
+    width: 100%;
+    height: 500px;
+    background-color: #651616;
+}
+.footer2 img {
+    position: absolute;
+    left: 0%;
+    width: 75px;
+    height: 75px;
+}
+.instagram {
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    font-size: 20px;
+    color: white;
+}
+.WhatsApp {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    font-size: 20px;
+    color: white;
+}
+.links-rapidos nav {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.links-rapidos a {
+    text-decoration: none;
+    color: white;
+}
+.links-rapidos{
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 5%;
+}
+.contato {
+    position: absolute;
+    top: 400px;
+    left: 5%;
+    color: #F7D358;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.local {
+    position: absolute;
+    top: 0px;
+    left: -25px;
+}
+.phone {
+    position: absolute;
+    top: 35px;
+    left: -25px;
+}
+.envelope {
+    position: absolute;
+    top: 70px;
+    left: -25px;
+}
+/*Produtos*/
+.container1 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 150px;
+    left: 5%;
+    border-radius: 5px;
+}
+.container1 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container1 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container1 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container1 p {
+    position: absolute;
+    top: 325px;
+}
+.container1 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container1 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container1 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container1 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container1 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container1 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container1 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container2 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 150px;
+    left: 30%;
+    border-radius: 5px;
+}
+.container2 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container2 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container2 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container2 p {
+    position: absolute;
+    top: 325px;
+}
+.container2 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container2 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container2 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container2 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container2 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container2 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container2 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container3 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 150px;
+    left: 55%;
+    border-radius: 5px;
+}
+.container3 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container3 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container3 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container3 p {
+    position: absolute;
+    top: 325px;
+}
+.container3 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container3 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container3 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container3 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container3 input {
+    position: absolute;
+    top: 475px;
+    width: 50px;
+    left: 75%;
+}
+.container3 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container3 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container3 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+
+.container4 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 150px;
+    left: 80%;
+    border-radius: 5px;
+}
+.container4 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container4 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container4 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container4 p {
+    position: absolute;
+    top: 325px;
+}
+.container4 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container4 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container4 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container4 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container4 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container4 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container4 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container5 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 750px;
+    left: 5%;
+    border-radius: 5px;
+}
+.container5 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container5 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container5 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container5 p {
+    position: absolute;
+    top: 325px;
+}
+.container5 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container5 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container5 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container5 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container5 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container5 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container5 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container6 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 750px;
+    left: 30%;
+    border-radius: 5px;
+}
+.container6 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container6 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container6 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container6 p {
+    position: absolute;
+    top: 325px;
+}
+.container6 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container6 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container6 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container6 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container6 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container6 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container6 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container7 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 750px;
+    left: 55%;
+    border-radius: 5px;
+}
+.container7 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container7 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container7 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container7 p {
+    position: absolute;
+    top: 325px;
+}
+.container7 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container7 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container7 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container7 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container7 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container7 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container7 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+
+.container8 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 750px;
+    left: 80%;
+    border-radius: 5px;
+}
+.container8 input {
+    position: absolute;
+    top: 475px;
+    width: 50px;
+    left: 75%;
+}
+
+.container8 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container8 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container8 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container8 p {
+    position: absolute;
+    top: 325px;
+}
+.container8 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container8 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container8 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container8 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container8 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container8 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container8 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container9 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1300px;
+    left: 5%;
+    border-radius: 5px;
+}
+.container9 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container9 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container9 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container9 p {
+    position: absolute;
+    top: 325px;
+}
+.container9 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container9 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container9 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container9 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container9 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container9 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container9 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.container10 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1300px;
+    left: 30%;
+    border-radius: 5px;
+}
+.container10 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container10 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container10 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container10 p {
+    position: absolute;
+    top: 325px;
+}
+.container10 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container10 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container10 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container10 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container10 input {
+    position: absolute;
+    top: 475px;
+    width: 50px;
+    left: 75%;
+}
+.container10 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container10 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container10 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+/**/
+.container11 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 3150px;
+    left: 5%;
+    border-radius: 5px;
+}
+.container11 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container11 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container11 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.container11 p {
+    position: absolute;
+    top: 325px;
+}
+.container11 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container11 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.container11 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.container11 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.container11 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.container11 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container11 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa1 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1300px;
+    left: 55%;
+    border-radius: 5px;
+}
+.caixa1 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa1 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa1 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa1 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa1 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa1 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa1 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa1 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa1 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa1 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa1 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa2 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1300px;
+    left: 80%;
+    border-radius: 5px;
+}
+.caixa2 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa2 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa2 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa2 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa2 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa2 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa2 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa2 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa2 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa2 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa2 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa3 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1900px;
+    left: 5%;
+    border-radius: 5px;
+}
+.caixa3 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa3 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa3 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa3 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa3 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa3 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa3 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa3 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa3 input {
+    position: absolute;
+    top: 475px;
+    width: 50px;
+    left: 75%;
+}
+.caixa3 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa3 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa3 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa4 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1900px;
+    left: 30%;
+    border-radius: 5px;
+}
+.caixa4 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa4 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa4 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa4 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa4 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa4 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa4 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa4 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa4 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa4 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa4 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa5 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1900px;
+    left: 55%;
+    border-radius: 5px;
+}
+.caixa5 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa5 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa5 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa5 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa5 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa5 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa5 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa5 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa5 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa5 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa5 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa6 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 1900px;
+    left: 80%;
+    border-radius: 5px;
+}
+.caixa6 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa6 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa6 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa6 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa6 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa6 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa6 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa6 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa6 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa6 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa6 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa7 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 2500px;
+    left: 5%;
+    border-radius: 5px;
+}
+.caixa7 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa7 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa7 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa7 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa7 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa7 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa7 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa7 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa7 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa7 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa7 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa8 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 2500px;
+    left: 30%;
+    border-radius: 5px;
+}
+.caixa8 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa8 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa8 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa8 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa8 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa8 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa8 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa8 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa8 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa8 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa8 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa9 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 2500px;
+    left: 55%;
+    border-radius: 5px;
+}
+.caixa9 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa9 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa9 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa9 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa9 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa9 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa9 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa9 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa9 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa9 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa9 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.caixa10 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 2500px;
+    left: 80%;
+    border-radius: 5px;
+}
+.caixa10 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa10 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caixa10 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.caixa10 p {
+    position: absolute;
+    top: 325px;
+}
+.caixa10 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.caixa10 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.caixa10 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.caixa10 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.caixa10 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.caixa10 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa10 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.premium {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 3150px;
+    left: 30%;
+    border-radius: 5px;
+}
+.premium img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.premium p {
+    position: absolute;
+    top: 325px;
+}
+.premium .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.premium button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.premium button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.premium .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+
+.premium input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.premium .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.premium .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.premium1 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 3400px;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+.premium1 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium1 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium1 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.premium1 p {
+    position: absolute;
+    top: 325px;
+}
+.premium1 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.premium1 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.premium1 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.premium1 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.premium1 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.premium1 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.premium1 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+.premium2 {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    top: 3150px;
+    left: 80%;
+    border-radius: 5px;
+}
+.premium2 img {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium2 h3 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premium2 h4 {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+}
+.premium2 p {
+    position: absolute;
+    top: 325px;
+}
+.premium2 .buy {
+    position: absolute;
+    top: 435px;
+    width: 100px;
+    height: 35px;
+    background-color: #F5C144;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.premium2 button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #651616;
+    color: #F5C144;
+    border: none;
+    border-radius: 5px;
+    left: 65%;
+    top: 415px;
+}
+.premium2 button:hover {
+    background-color: #F5C144;
+    color: #FFF;
+}
+.premium2 .buy:hover {
+    background-color: #651616;
+    color: #FFF;
+}
+.premium2 input {
+    position: absolute;
+    top: 425px;
+    width: 50px;
+    left: 20%;
+}
+.premium2 .btn-menos {
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.premium2 .btn-plus {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    width: 25px;
+    height: 25px;
+}
+/*carrinho*/
+.header {
+    background-color: #651616;
+    width: 100%;
+    height: 100px;
+}
+footer .btn2 {
+    background-color: #651616;
+    color: #F5C144;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 600px;
+    left: 90%;
+}
+footer button {
+    position: absolute;
+    top: 500px;
+    border: none;
+    width: 100px;
+    height: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: #651616;
+    background-color: #F5C144;
+}
+/*carrinho*/
+.btn-menos {
+    position: absolute;
+    left: 50%;
+}
+.number-input {
+    position: absolute;
+    background-color: #651616;
+    color: #F5C144;
+    top: -10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+.number-input button {
+    position: absolute;
+    left: 200%;
+}
+aside {
+    height: 4500px;
+}
+.popup {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: -150px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #F5C144;
+}
+.santana-mariamanteiga {
+    position: absolute;
+
+}
+.popup p {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup input {
+    border-radius: 10px;
+    border: none;
+    
+}
+.popup button {
+    position: fixed;
+    border: none;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5C144;
+    color: #651616;
+    border-radius: 2px;
+    height: 35px;
+    padding: 10px;
+}
+.popup-content {
+  background: #651616;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.fechar {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #popup {
+    width: 500px;                  /* popup centralizado menor */
+    max-height: 80vh;
+    padding: 25px;
+    border-radius: 12px;
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* bloco de endereço no desktop */
+  #enderecoCampos {
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* label e select lado a lado */
+  #enderecoCampos .santana-mariamanteiga {
+    display: flex;
+    align-items: center;
+    gap: 15px;                     /* espaço entre label e select */
+    margin-bottom: 20px;
+  }
+
+  #popup label {
+    font-size: 15px;
+    font-weight: 600;
+    min-width: 140px;              /* largura fixa pro label */
+    text-align: right;             /* deixa alinhado bonitinho */
+  }
+
+  #popup input,
+  #popup select {
+    flex: 1;                       /* ocupa o espaço restante */
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  #popup input:focus,
+  #popup select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,.3);
+  }
+
+  #popup button {
+    width: auto;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .tradicionais {
+    background-color: white;
+    width: 600px;
+    height: 1300px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    top: 4700px;
+  }.produto {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto button i {
+  font-size: 18px;
+}
+
+.produto button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto button:last-of-type:hover {
+  background: #333;
+}
+.footer3 {
+    display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  top: 450px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+.footer3 .txt {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Lista do carrinho */
+#Carrinho {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.footer3 p {
+    position: absolute;
+    left: 30%;
+}
+#Carrinho li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* forma de pagamento */
+.forma-pagamento {
+  margin: 10px 0;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+.forma-pagamento label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.forma-pagamento select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.forma-pagamento select:focus {
+  border: 1px solid #ff6700;
+}
+
+/* campo de troco */
+#trocoDiv {
+  margin-top: 10px;
+  position: absolute;
+  left: 65%;
+  top: 30px;
+}
+
+#trocoDiv label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+#trocoDiv .inp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s;
+  position: absolute;
+  top: 100px;
+  left: 55%;
+}
+
+#trocoDiv .inp:focus {
+  border: 1px solid #ff6700;
+}
+
+/* botão finalizar */
+.finalizar {
+    position: absolute;
+    top: 50px;
+    left: 90%;
+  width: 100px;
+  padding: 14px;
+  margin-top: 15px;
+  background: #F5C144;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.finalizar:hover {
+  background: #e55a00;
+}
+.produto1 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 5px;
+}
+.produto1:hover {
+    width: 250px;
+}
+.produto1:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto1 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto1 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto1 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto1 button i {
+  font-size: 18px;
+}
+
+.produto1 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto1 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto1 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto1 button:last-of-type:hover {
+  background: #333;
+}
+.produto2 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+.produto2:hover {
+    width: 250px;
+}
+.produto2:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto2 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto2 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto2 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto2 button i {
+  font-size: 18px;
+}
+
+.produto2 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto2 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto2 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto2 button:last-of-type:hover {
+  background: #333;
+}
+.produto3 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 200px;
+}
+.produto3:hover {
+    width: 250px;
+}
+.produto3:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto3 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto3 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto3 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto3 button i {
+  font-size: 18px;
+}
+
+.produto3 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto3 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto3 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto3 button:last-of-type:hover {
+  background: #333;
+}
+.produto4 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0;
+  top: 400px;
+}
+.produto4:hover {
+    width: 250px;
+}
+.produto4:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto4 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto4 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto4 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto4 button i {
+  font-size: 18px;
+}
+
+.produto4 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto4 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto4 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto4 button:last-of-type:hover {
+  background: #333;
+}
+.produto5 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 400px;
+}
+.produto5:hover {
+    width: 250px;
+}
+.produto5:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto5 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto5 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto5 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto5 button i {
+  font-size: 18px;
+}
+
+.produto5 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto5 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto5 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto5 button:last-of-type:hover {
+  background: #333;
+}
+.produto6 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0%;
+  top: 600px;
+}
+.produto6:hover {
+    width: 250px;
+}
+.produto6:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto6 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto6 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto6 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto6 button i {
+  font-size: 18px;
+}
+
+.produto6 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto6 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto6 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto6 button:last-of-type:hover {
+  background: #333;
+}
+.produto7 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 600px;
+}
+.produto7:hover {
+    width: 250px;
+}
+.produto7:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto7 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto7 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto7 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto7 button i {
+  font-size: 18px;
+}
+
+.produto7 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto7 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto7 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto7 button:last-of-type:hover {
+  background: #333;
+}
+.produto8 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0%;
+  top: 800px;
+}
+.produto8:hover {
+    width: 250px;
+}
+.produto8:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto8 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto8 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto8 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto8 button i {
+  font-size: 18px;
+}
+
+.produto8 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto8 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto8 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto8 button:last-of-type:hover {
+  background: #333;
+}
+.produto9 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 800px;
+}
+.produto9:hover {
+    width: 250px;
+}
+.produto9:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto9 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto9 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto9 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto9 button i {
+  font-size: 18px;
+}
+
+.produto9 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto9 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto9 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto9 button:last-of-type:hover {
+  background: #333;
+}
+.produto10 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0%;
+  top: 1000px;
+}
+.produto10:hover {
+    width: 250px;
+}
+.produto10:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto10 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto10 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto10 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto10 button i {
+  font-size: 18px;
+}
+
+.produto10 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto10 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto10 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto10 button:last-of-type:hover {
+  background: #333;
+}
+.produto11 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 50%;
+  top: 1000px;
+}
+.produto11:hover {
+    width: 250px;
+}
+.produto11:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto11 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto11 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto11 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto11 button i {
+  font-size: 18px;
+}
+
+.produto11 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto11 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto11 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto11 button:last-of-type:hover {
+  background: #333;
+}
+.produto12 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  position: absolute;
+  left: 0%;
+  top: 1200px;
+}
+.produto12:hover {
+    width: 250px;
+}
+.produto12:hover {
+  transform: translateY(-5px);
+}
+
+/* nome e preço */
+.produto12 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.produto12 h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff6700; /* laranja da loja */
+}
+
+/* botões de + e - */
+.btn-menos, .btn-plus {
+  background: #ff6700;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.btn-menos:hover, .btn-plus:hover {
+  background: #e55a00;
+}
+
+/* input da quantidade */
+.produto12 input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* botão do carrinho */
+.produto12 button i {
+  font-size: 18px;
+}
+
+.produto12 button:last-of-type {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto12 .btn-plus {
+    left: 50%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto12 .btn-menos {
+    position:absolute;
+    left: 3%;
+    color: #651616;
+    background-color: #F5C144;
+}
+.produto12 button:last-of-type:hover {
+  background: #333;
+}
+.txth1 {
+    position:absolute;
+    top: 3800px;
+    font-size: 80px;
+    color: #F5C144;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 480px){
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    form {
+        position: absolute;
+        top: 450px;
+    }
+    header nav{
+        position: absolute;
+        left: 25%;
+    }
+    .container h2{
+        position: absolute;
+        font-size: 40px;
+        top: 200px;
+    }
+    .container p {
+        position: absolute;
+        top: 350px;
+    }
+    .container button {
+        position: absolute;
+        top: 450px;
+    }
+    main h2 {
+        position: absolute;
+        font-size: 35px;
+    }
+    main p {
+        opacity: 0;
+    }
+    .box1 {
+        width: 300px;
+        height: 700px;
+    }
+    .box1 img {
+        width: 300px;
+        height: 400px;
+        top: 200px;
+    }
+    .box1 h3{
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .box1 .price {
+        position: absolute;
+        top: 650px;
+        left: 15%;
+    }
+    .box1 .btn1 {
+        position: absolute;
+        top: 550px;
+    }
+    .box1 .btn2{
+        position: absolute;
+        top: 600px;
+    } 
+     .box2 {
+        width: 300px;
+        height: 700px;
+    }
+    .box2 img {
+        width: 300px;
+        height: 400px;
+        top: 200px;
+    }
+    .box2 h3{
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .box2 .price2 {
+        position: absolute;
+        top: 650px;
+        left: 15%;
+    }
+    .box2 .btn1 {
+        position: absolute;
+        top: 550px;
+    }
+    .box2 .btn2{
+        position: absolute;
+        top: 600px;
+    } 
+     .box3 {
+        width: 300px;
+        height: 700px;
+    }
+    .box3 img {
+        width: 300px;
+        height: 400px;
+        top: 200px;
+    }
+    .box3 h3{
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .box3 .price3 {
+        position: absolute;
+        top: 650px;
+        left: 15%;
+    }
+    .box3 .btn1 {
+        position: absolute;
+        top: 550px;
+    }
+    .box3 .btn2{
+        position: absolute;
+        top: 600px;
+    } 
+    .footer1 {
+        position: absolute;
+        top: 4000px;
+    }
+    .footer1 h2 {
+        position: absolute;
+        font-size: 35px;
+        top: 100px;
+        width: 300px;
+    }
+    .footer1 p {
+        position: absolute;
+        font-size: 20px;
+        width: 250px;
+        top: 250px;
+    } 
+    .footer1 .btn1 {
+        position: absolute;
+        left: 15%;
+        width: 100px;
+    }
+    .footer2 {
+        position: absolute;
+        top: 4500px;
+    }
+    .footer2 iframe {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 200px;
+    }
+    .container1 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0;
+    }
+    .container1 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container1 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container1 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container1  .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .container1 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container1 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container1 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container1 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container1 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .container2 {
+        position: absolute;
+        left: 55%;
+        width: 200px;
+    }
+     .container2 {
+        position: absolute;
+        width: 200px;
+        height: 350px;
+        left: 50%;
+        border-radius: 15px;
+    }
+    .container2 img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 100px;
+    }
+    .container2 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container2 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container2  .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .container2 .buy:hover:after {
+        background-color: #F5C144;
+    }
+    .container2 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container2 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container2 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container2 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container2 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+      .container3 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        top: 600px;
+        left: 50%;
+    }
+    .container3 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container3 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container3 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container3  .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .container3 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container3 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container3 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container3 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container3 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+      .container4 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        top: 4000px;
+        left: 50%;
+    }
+    .container4 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container4 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container4 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container4  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container4 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container4 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container4 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container4 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container4 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .container5 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0;
+        top: 600px;
+    }
+    .container5 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container5 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container5 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container5  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container5 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container5 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container5 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container5 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container5 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .container6 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0;
+        top: 1050px;
+    }
+    .container6 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container6 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container6 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container6  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container6 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container6 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container6 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container6 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container6 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .container7 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 1050px;
+    }
+    .container7 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container7 h3 {
+        position: absolute;
+        top: 200px;
+        font-size: 15px;
+    }
+    .container7 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container7  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container7 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container7 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container7 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container7 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container7 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .container8 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0;
+        top: 1500px;
+    }
+    .container8 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container8 h3 {
+        position: absolute;
+        top: 210px;
+          font-size: 15px;
+    }
+    .container8 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container8  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container8 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container8 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container8 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container8 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container8 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .container9 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 1500px;
+    }
+    .container9 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container9 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container9 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container9  .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .container9 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container9 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container9 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container9 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container9 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .container10 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        top: 1900px;
+        left: 0;
+    }
+    .container10 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container10 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container10 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container10  .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .container10 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container10 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .container10 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container10 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container10 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     /**/
+      .container11 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        top: 4400px;
+        left: 0;
+    }
+    .container11 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .container11 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .container11 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .container11  .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .container11 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .container11 h4 {
+        position: absolute;
+        top: 290px;
+    }
+    .container11 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.container11 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.container11 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .caixa1 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 4800px;
+    }
+    .caixa1 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa1 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa1 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa1 .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .caixa1 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa1 h4 {
+        position: absolute;
+        top: 290px;
+    }
+   .caixa1 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa1 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa1 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa2 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0%;
+        top: 2300px;
+    }
+    .caixa2 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa2 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa2 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+     }
+    .caixa2 .buy{
+        position: absolute;
+        top: 275px;
+        width: 100px;
+        opacity: 1;
+    }
+    .caixa2 button {
+        position: absolute;
+        top: 260px;
+        color: #F5C144;
+        height: 30px;
+        width: 150px;
+        left: 70%;
+    }
+    .caixa2 h4 {
+        position: absolute;
+        top: 290px;
+          font-size: 15px;
+    }
+     .caixa2 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa2 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa2 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa3 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 2300px;
+    }
+    .caixa3 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa3 h3 {
+        position: absolute;
+        top: 210px;
+        width: 150px;
+          font-size: 15px;
+    }
+    .caixa3 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa3 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa3 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa3 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa3 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa3 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa3 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa4 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 1900px;
+    }
+    .caixa4 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa4 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa4 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa4 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa4 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa4 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa4 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa4 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa4 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa5 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0%;
+        top: 2700px;
+    }
+    .caixa5 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa5 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa5 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa5 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa5 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa5 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa5 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa5 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa5 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa6 {
+        position: absolute;
+        width: 200px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 2700px;
+    }
+    .caixa6 img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa6 h3 {
+        position: absolute;
+        top: 200px;
+    }
+    .caixa6 p {
+        position:b absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa6 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa6 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa6 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa6 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa6 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa6 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa7 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0%;
+        top: 3100px;
+    }
+    .caixa7 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa7 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa7 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa7 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa7 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 170%;
+    }
+    .caixa7 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa7 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa7 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa7 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa8 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 55%;
+        top: 3100px;
+    }
+    .caixa8 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa8 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa8 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa8 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa8 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa8 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa8 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa8 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa8 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa9 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 3500px;
+    }
+    .caixa9 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa9 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa9 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa9 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+    }
+    .caixa9 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa9 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa9 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa9 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa9 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+    .caixa10 {
+        position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 0%;
+        top: 3500px;
+    }
+    .caixa10 img {
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+    }
+    .caixa10 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+    }
+    .caixa10 p {
+        position: absolute;
+        top: 275px;
+        opacity: 0;
+    }
+    .caixa10 .buy{
+        position: absolute;
+        top: 275px;
+        opacity: 1;
+        width: 100px;
+    }
+    .caixa10 button {
+        position: absolute;
+        top: 260px;
+        height: 30px;
+        width: 50px;
+        left: 70%;
+    }
+    .caixa10 h4 {
+        position: absolute;
+        top: 290px;
+    }
+     .caixa10 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.caixa10 .btn-menos {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.caixa10 .btn-plus {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+}
+     .premium {
+         position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 50%;
+        top: 4400px;
+     }
+     .premium img {
+         position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+     }
+     .premium h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+     }
+     .premium .buy {
+        opacity: 1;
+        width: 100px;
+        position: absolute;
+        top: 270px;
+     }
+     .premium h4 {
+        position: absolute;
+        top: 300px;
+     }
+     .premium p {
+        opacity: 0;
+     }
+     .premium button {
+        position: absolute;
+        top: 275px;
+        left: 85%;
+        transform: translate(-50%, -50%);
+       height: 30px;
+        width: 50px;
+     }
+      .premium input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.premium .btn-menos {
+    position: absolute;
+    top: 273px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+}
+.premium .btn-plus {
+    position: absolute;
+    top: 273px;
+    left: 110px;
+    width: 25px;
+    height: 25px;
+}
+         .premium1 {
+         position: absolute;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+        left: 25%;
+        top: 4175px;
+     }
+     .premium1 img {
+         position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+     }
+     .premium1 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+     }
+     .premium1 .buy {
+        position: absolute;
+        top: 270px;
+        opacity: 1;
+
+     }
+     .premium1 h4 {
+        position: absolute;
+        top: 300px;
+     }
+     .premium1 p {
+        opacity: 0;
+     }
+     .premium1 button {
+        position: absolute;
+        top: 275px;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        height: 30px;
+        width: 50px;
+     }
+      .premium1 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.premium1 .btn-menos {
+    position: absolute;
+    top: 270px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+}
+.premium1 .btn-plus {
+    position: absolute;
+    top: 270px;
+    left: 115px;
+    width: 25px;
+    height: 25px;
+}
+     .premium2 {
+        position: absolute;
+        top: 4800px;
+        left: 0;
+        width: 190px;
+        height: 350px;
+        border-radius: 15px;
+     }
+      .premium2 img {
+         position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100px;
+     }
+     .premium2 h3 {
+        position: absolute;
+        top: 200px;
+          font-size: 15px;
+     }
+     .premium2 .buy {
+        position: absolute;
+        top: 270px;
+        opacity: 1;
+     }
+     .premium2 h4 {
+        position: absolute;
+        top: 300px;
+     }
+     .premium2 p {
+        opacity: 0;
+     }
+     .premium2 button {
+        position: absolute;
+        top: 275px;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        height: 30px;
+        width: 50px;
+     }
+      .premium2 input {
+    position: absolute;
+    top: 260px;
+    width: 50px;
+    left: 20%;
+}
+.premium2 .btn-menos {
+    position: absolute;
+    top: 273px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+}
+.premium2 .btn-plus {
+    position: absolute;
+    top: 273px;
+    left: 110px;
+    width: 25px;
+    height: 25px;
+}
+     .footer3 {
+       display: none; /* começa escondido */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F5C144;
+  border: none;
+  padding: 15px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  flex-direction: column;
+  top: 600px;
+
+     }
+     .txt {
+         font-family: "Open Sans", sans-serif;
+     }
+     .footer3 p {
+        position: absolute;
+        top: 25px;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+     .footer3 input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+     }
+     .forma-pagamento {
+        position: absolute;
+        top: 500px;
+     }
+     .footer3 ul {
+        position: absolute;
+        top: 200px;
+     }
+     .footer3 button {
+        position: absolute;
+        top: 600px;
+     }
+       .footer3 ul {
+        position: absolute;
+        top: 400px;
+        height: 500px;
+        width: 400px;
+     }
+        #Carrinho {
+  max-width: 100px; 
+  max-height: 50px;
+  overflow-y: auto;    
+  overflow-x: hidden;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  list-style: none; 
+  top: 50px;
+  background-color: transparent;
+  color: black;
+}
+.footer3 #trocoDiv .inp{
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#trocoDiv label {
+    opacity: 0;
+}
+.footer3 .finalizar {
+    position: absolute;
+    left: 15%;
+}
+.footer3 .forma-pagamento {
+    position: absolute;
+    top: 75px;
+
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.footer3 .forma-pagamento input {
+    position: absolute;
+    width: 50px;
+}
+#popup, #popup * {
+    box-sizing: border-box;
+  }
+
+  /* corpo do popup no mobile */
+  #popup {
+    width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  /* bloco dos campos de endereço */
+  #enderecoCampos {
+    display: block;                /* (fica visível quando JS trocar p/ block) */
+    margin-top: 12px;
+    padding-top: 4px;
+  }
+
+  /* grupo "Mora por aqui?" com espaço */
+  #enderecoCampos .santana-mariamanteiga {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                     /* espaço entre label e select */
+    margin-bottom: 16px;           /* espaço abaixo do grupo */
+  }
+
+  /* visual de labels no mobile */
+  #popup label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* inputs e selects full-width, fáceis de clicar */
+  #popup input,
+  #popup select,
+  #enderecoCampos select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;               /* evita zoom no iOS */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    outline: none;
+    margin: 0;                     /* tira margens estranhas de temas */
+  }
+
+  /* foco acessível */
+  #popup input:focus,
+  #popup select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0,123,255,.35);
+  }
+
+  /* botões do popup */
+  #popup button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  #enderecoCampos .santana-mariamanteiga { gap: 10px !important; margin-bottom: 16px !important; }
+#enderecoCampos select { padding: 14px !important; }
+
+.txt1 {
+    position: fixed;
+    width: 300px;
+    top: 10px;
+}
+#enderecoCampos {
+    position: fixed;
+    top: 95px;
+    width: 450px;
+    color: white;
+}
+#enderecoCampos label{
+color: white;
+
+ }
+ .txth2 {
+    position: fixed;
+    top: 35px;
+    left: 20%;
+ }
+ .tradicionais {
+    position: absolute;
+    top: 6500px;
+    height: 2200px;
+ }
+ .produto {
+    position: absolute;
+    left: 15%;
+ }
+ .produto2 {
+    position: absolute;
+    left: 15%;
+ }
+ .produto4 {
+    position: absolute;
+    left: 15%;
+ }
+ .produto6 {
+    position: absolute;
+    left: 10%;
+ }
+ .produto8 {
+    position: absolute;
+    left: 15%;
+ }
+ .produto10 {
+    position: absolute;
+    left: 15%;
+ }
+ .txth1 {
+    display: none;
+ }
+ .produto {
+    width: 150px;
+    height: 200px;
+ }
+ .produto .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+  .produto1 {
+    width: 150px;
+    height: 200px;
+ }
+ .produto1 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+  .produto2 {
+    position: absolute;
+    top: 300px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto2 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+  .produto3 {
+    position: absolute;
+    top: 300px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto3 .cart {
+    position: absolute;
+    width: 100px;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+  .produto4 {
+    position: absolute;
+    top: 600px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto4 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+  .produto5 {
+    position: absolute;
+    top: 600px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto5 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto6 {
+    position: absolute;
+    top: 900px;
+    width: 150px;
+    height: 200px;
+    left: 15%;
+ }
+ .produto6 .cart {
+    position: absolute;
+    width: 100px;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto7 {
+    position: absolute;
+    top: 900px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto7 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto8 {
+    position: absolute;
+    top: 1200px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto8 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto9 {
+    position: absolute;
+    top: 1200px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto9 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto10 {
+    position: absolute;
+    top: 1500px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto10 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto11 {
+    position: absolute;
+    top: 1500px;
+    width: 150px;
+    height: 200px;
+ }
+ .produto11 .cart {
+    position: absolute;
+    width: 100px;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .produto12 {
+    position: absolute;
+    top: 1800px;
+    left: 15%;
+    width: 150px;
+    height: 200px;
+ }
+ .produto12 .cart {
+    position: absolute;
+    width: 100px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ccc;
+ }
+ .produto12 .aviso {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+ }
+ .produto12 button {
+    background-color: #ccc;
+ }
+ .footer3 {
+    background-color: white;
+ }
+ .footer3 .finalizar {
+    top: 150px;
+    left: 75%;
+    width: 150px;
+    height: 40px;
+ }
+ .footer3 .txt {
+    left: 70%;
+    top: 30px;
+ }
+ .footer3 .forma-pagamento {
+    position: absolute;
+    left: 30%;
+    top: 20px;
+ }
+ #trocoDiv {
+    top: 0px;
+    left: 10%;
+ }
+ .nada {
+    position: absolute;
+    top: 8000px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+ }
+ }
