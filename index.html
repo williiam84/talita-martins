@@ -18,52 +18,29 @@
       </nav>
 
     </header>
-    <div class="container">
+     <div class="container">
       <h2>Descubra o Sabor Autêntico</h2>
       <p>Tradição e qualidade em cada detalhe para quem aprecia o verdadeiro sabor.</p>
       <a href="produtos.html"><button>Cardápio</button></a>
     </div>
-<main>
-  <section class="section1">
-    <h2>Nossos Destaques</h2>
-    <p class="txt">Confira nossas estrelas que conquistaram o paladar de quem prova.</p>
+    
+    <section class="section">
+     <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="midia/depoimentos1.jpeg" alt="Imagem 1">
+  </div>
+  <div class="slide fade">
+    <img src="midia/depoimentos2.jpeg" alt="Imagem 2">
+  </div>
+  <div class="slide fade">
+    <img src="midia/depoimentos3.jpeg" alt="Imagem 3">
+  </div>
 
-    </section>
-
-    <div class="box1">
-      <img src="midia/pudim.jpg" alt="">
-      <h3>Pudim</h3>
-      <p>Creme gelado com sabor clássico de pudim,<br> doce na medida certa.</p>
-      <h3 class="price">R$7,00</h3>
-      <button class="btn1">Comprar</button>
-      <button class="btn2">Adicionar ao carrinho</button>
-    </div>
-     <div class="box2">
-      <img src="midia/kinder.jpg" alt="">
-      <h3>kinder bueno</h3>
-      <p>Inspirado no famoso chocolate, cremoso.</p>
-      <h3 class="price2">R$ 7,00</h3>
-       <button class="btn1">Comprar</button>
-      <button class="btn2">Adicionar ao carrinho</button>
-     </div>
-      <div class="box3">
-        <img src="midia/oreo.jpg" alt="">
-        <h3>Oreo</h3>
-        <p>Creme gelado com pedaços crocantes do biscoito mais famoso do mundo.</p>
-        <h3 class="price3">R$ 8,00</h3>
-         <button class="btn1">Comprar</button>
-      <button class="btn2">Adicionar ao carrinho</button>
-      </div>
-
-  <section class="section2">
-    <h2>O que dizem sobre nós</h2>
-
-    <div class="avaliacoes">
-     <div class="avaliacao1"></div>
-      <div class="avaliacao2"></div>
-       <div class="avaliacao3"></div>
-       </div>
-  </section>
+  
+  <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+  <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+</div>
+</section>
 </main>
   
 <footer>
@@ -101,6 +78,7 @@
   </div>
   </div>
 
+  <script src="script.js"></script>
 </footer>
 </body>
 </html>

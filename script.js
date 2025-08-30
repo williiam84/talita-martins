@@ -239,3 +239,28 @@ function delivery() {
 document.getElementById("fecharPopup1").addEventListener("click", () => {
   document.getElementById("popup1").style.display = "none";
 });
+
+let slideIndex = 1; 
+mostrarSlide(slideIndex);
+
+// Controle manual
+function mudarSlide(n) {
+  mostrarSlide(slideIndex += n);
+}
+
+// Mostra o slide correto
+function mostrarSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+// Automático com intervalo fixo
+setInterval(() => {
+  mudarSlide(1);
+}, 4000);
