@@ -5801,6 +5801,14 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
      }
+     .footer1 {
+        position: absolute;
+        top: 1500px;
+     }
+     .footer2 {
+        position: absolute;
+        top: 2000px;
+     }
      .forma-pagamento {
         position: absolute;
         top: 500px;
