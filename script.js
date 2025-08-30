@@ -205,3 +205,37 @@ const menuBtn = document.getElementById("menu-btn");
       navLinks.classList.toggle("show");
     });
 
+function delivery() {
+  let lugar = document.getElementById("lugar").value;
+  let txt = document.getElementById("txt");
+  let tempo = document.getElementById("tempo");
+
+  let mensagem = "";
+  let minutos = "";
+
+  if (lugar === "Santana") {
+    mensagem = "⏱️ Entrega em Santana";
+    minutos = "25 min <i class='fa-solid fa-clock'></i>";
+  } else if (lugar === "Maria Manteiga") {
+    mensagem = "⏱️ Entrega em Maria Manteiga";
+    minutos = "30 min <i class='fa-solid fa-clock'></i>";
+  } else if (lugar === "nao") {
+    mensagem = "⏱️ Entrega em outros locais";
+    minutos = "40 min <i class='fa-solid fa-clock'></i>";
+  } else {
+    mensagem = "Por favor, selecione um local de entrega.";
+    minutos = "";
+  }
+
+  // Atualiza o conteúdo
+  txt.innerHTML = mensagem;
+  tempo.innerHTML = minutos;
+
+  // Abre o pop-up
+  document.getElementById("popup1").style.display = "flex";
+}
+
+// Fechar popup no "X"
+document.getElementById("fecharPopup1").addEventListener("click", () => {
+  document.getElementById("popup1").style.display = "none";
+});

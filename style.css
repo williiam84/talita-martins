@@ -2682,6 +2682,38 @@ aside {
   cursor: pointer;
 }
 
+.popup1 {
+  display: none; /* começa escondido */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content1 {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.phone:hover {
+    text-decoration: underline;
+    color: #F5C144;
+}
+.fechar1 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -4403,8 +4435,8 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        top: 4000px;
-        left: 50%;
+        top: 3925px;
+        left: 55%;
     }
     .container4 img {
         position: absolute;
@@ -4831,7 +4863,7 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        top: 4400px;
+        top: 4350px;
         left: 0;
     }
     .container11 img {
@@ -4892,8 +4924,8 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        left: 50%;
-        top: 4800px;
+        left: 55%;
+        top: 4750px;
     }
     .caixa1 img {
         position: absolute;
@@ -5382,7 +5414,7 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        left: 50%;
+        left: 55%;
         top: 3500px;
     }
     .caixa9 img {
@@ -5503,8 +5535,8 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        left: 50%;
-        top: 4400px;
+        left: 55%;
+        top: 4350px;
      }
      .premium img {
          position: absolute;
@@ -5563,8 +5595,8 @@ body {
         width: 190px;
         height: 350px;
         border-radius: 15px;
-        left: 25%;
-        top: 4175px;
+        left: 23%;
+        top: 4100px;
      }
      .premium1 img {
          position: absolute;
@@ -5589,6 +5621,8 @@ body {
      }
      .premium1 p {
         opacity: 0;
+        position: absolute;
+        top: 4200px;
      }
      .premium1 button {
         position: absolute;
@@ -5620,7 +5654,7 @@ body {
 }
      .premium2 {
         position: absolute;
-        top: 4800px;
+        top: 4750px;
         left: 0;
         width: 190px;
         height: 350px;
