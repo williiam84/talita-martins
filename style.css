@@ -6154,6 +6154,10 @@ color: white;
     transform: translate(-50%, -50%);
     background-color: #ccc;
  }
+ .produto12 .aviso {
+    position: absolute;
+    top: 100px;
+ }
  .produto12 button {
     background-color: #ccc;
  }
@@ -6210,5 +6214,13 @@ color: white;
     left: 50%;
     width: 300px;
     transform: translate(-50%, -50%);
+ }
+ .phone {
+    color: #F5C144;
+    text-decoration: none;
+ }
+ .phone:hover {
+    text-decoration: underline;
+    color: #F5C144;
  }
  }
