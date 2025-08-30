@@ -4123,6 +4123,29 @@ body {
       to {opacity: 1}
     }
 
+    .section h2 {
+        position: absolute;
+        top: -300px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        width: 800px;
+        color: #F5C144;
+    }
+    .section {
+        position: absolute;
+        top: 1500px;
+        left: 50%;
+        transform: translate(-50%);
+        gap: 30px;
+    }
+    section img {
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .avaliacao1 img{
+        border-radius: 15px;
+    }
 
 @media screen and (max-width: 480px){
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -4131,6 +4154,10 @@ body {
         padding: 0;
         overflow-x: hidden;
     }
+    html, body {
+  overflow-x: hidden;
+}
+
     form {
         position: absolute;
         top: 450px;
@@ -6159,5 +6186,21 @@ color: white;
     width: 100px;
     height: 100px;
     background-color: transparent;
+ }
+ .section {
+    top: 1100px;
+ }
+ .section img {
+    top: -200px;
+    width: 300px;
+    height: 100px;
+    border-radius: 15px;
+ }
+ .section h2 {
+    top: -90px;
+    font-size: 30px;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
  }
  }
