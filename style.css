@@ -6119,11 +6119,6 @@ color: white;
     transform: translate(-50%, -50%);
     background-color: #ccc;
  }
- .produto12 .aviso {
-    background-color: red;
-    color: white;
-    border-radius: 10px;
- }
  .produto12 button {
     background-color: #ccc;
  }
