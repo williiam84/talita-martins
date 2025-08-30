@@ -6130,6 +6130,15 @@ color: white;
  .footer3 {
     background-color: white;
  }
+ .aviso {
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
  .footer3 .finalizar {
     top: 150px;
     left: 75%;
