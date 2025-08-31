@@ -139,23 +139,38 @@ function confirmarPedido() {
   let pagamento = document.getElementById("pagamento").value;
   let tipoEntrega = document.querySelector("input[name='tipoEntrega']:checked").value;
 
-  // monta mensagem inicial
+  // valida campos de pagamento
+  if (!pagamento) {
+    alert("Selecione a forma de pagamento!");
+    return;
+  }
+
+  // valida endereço caso seja entrega
+  if (tipoEntrega === "entrega") {
+    let nome = document.getElementById("nome").value.trim();
+    let rua = document.getElementById("rua").value.trim();
+    let numero = document.getElementById("numero").value.trim();
+    let bairro = document.getElementById("bairro").value.trim();
+
+    if (!nome || !rua || !numero || !bairro) {
+      alert("Preencha todos os campos obrigatórios para entrega!");
+      return; // aqui bloqueia o envio
+    }
+  }
+
+  // monta mensagem do pedido
   let msg = "Olá, gostaria de fazer o pedido:\n";
   carrinho.forEach(item => {
     msg += `${item.qtd}x ${item.nome} - R$ ${item.preco} = R$ ${(item.qtd * item.preco).toFixed(2)}\n`;
   });
 
-  // calcula total do carrinho
   let totalCarrinho = parseFloat(totalSpan.textContent);
 
-  // calcula taxa de entrega se for entrega
-  let taxaEntrega = 0;
-  if(tipoEntrega === "entrega") {
+  if (tipoEntrega === "entrega") {
     let lugar = document.getElementById("lugar").value;
+    let taxaEntrega = 0;
     if (lugar === "Santana") taxaEntrega = 4;
     else if (lugar === "Maria Manteiga") taxaEntrega = 3;
-    else taxaEntrega = 0; // outros lugares
-
     totalCarrinho += taxaEntrega;
     msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
     msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;
@@ -163,41 +178,30 @@ function confirmarPedido() {
     msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;
   }
 
-  // forma de pagamento
   msg += `\nPagamento: ${pagamento}`;
   if (pagamento === "dinheiro") {
     let troco = document.getElementById("troco").value || "sem troco";
     msg += `\nTroco: ${troco}`;
   }
 
-  // informações de entrega
-  let msgExtra = "";
   if (tipoEntrega === "entrega") {
-    let nome = document.getElementById("nome").value;
-    let rua = document.getElementById("rua").value;
-    let numero = document.getElementById("numero").value;
-    let bairro = document.getElementById("bairro").value;
-    let referencia = document.getElementById("referencia").value;
+    let nome = document.getElementById("nome").value.trim();
+    let rua = document.getElementById("rua").value.trim();
+    let numero = document.getElementById("numero").value.trim();
+    let bairro = document.getElementById("bairro").value.trim();
+    let referencia = document.getElementById("referencia").value.trim() || "Não informado";
 
-    if (!nome || !rua || !numero || !bairro) {
-      alert("Preencha todos os campos obrigatórios!");
-      return;
-    }
-
-    msgExtra = `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia || "Não informado"}`;
+    msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
   } else {
-    msgExtra = "\n\n📦 Retirada na loja.";
+    msg += "\n\n📦 Retirada na loja.";
   }
 
-  msg += msgExtra;
-
-  // fecha popup
   document.getElementById("popup").style.display = "none";
 
-  // envia pro WhatsApp
-  const telefone = "5527997765557"; // seu número
+  const telefone = "5527997765557";
   window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");
 }
+
 const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
 
