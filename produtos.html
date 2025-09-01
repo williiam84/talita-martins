@@ -284,11 +284,15 @@
             <p>Combinação tropical com coco e banana</p>
             <h4>R$ 8,00</h4>
               
-            <button class="btn-menos" onclick="decrement('qtd19')">-</button>
-    <input type="number" id="qtd19" value="1" min="1">
-    <button class="btn-plus" onclick="increment('qtd19')">+</button>
+            <div class="aviso">Esgotado</div>
 
-          <button onclick="adicionarCarrinho('Caribe', 8, document.getElementById('qtd19').value)"><i class="fa-solid fa-cart-plus"></i></button>
+  <button class="btn-menos" disabled>-</button>
+  <input type="number" id="qtdcupuacu" value="0" disabled>
+  <button class="btn-plus" disabled>+</button>
+
+  <button disabled class="cart esgotado-btn">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
        </div>
 
        <div class="caixa10">
