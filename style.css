@@ -5531,6 +5531,10 @@ body {
     width: 25px;
     height: 25px;
 }
+.caixa9 .aviso {
+    position: absolute;
+    top: 100px;
+}
     .caixa10 {
         position: absolute;
         width: 190px;
