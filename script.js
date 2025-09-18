@@ -198,7 +198,7 @@ function confirmarPedido() {
 
   document.getElementById("popup").style.display = "none";
 
-  const telefone = "5527988223701";
+  const telefone = "5527997765557";
   window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");
 }
 
