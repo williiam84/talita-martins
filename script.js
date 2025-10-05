@@ -1,135 +1,65 @@
-let carrinho = [];  
+let carrinho = [];
+let totalSpan = document.getElementById("total");
 
-// Incrementa quantidade do input  
-function increment(inputId) {  
-  const input = document.getElementById(inputId);  
-  input.stepUp();  
-}  
+function adicionarCarrinho(nome, preco, qtd) {
+  qtd = parseInt(qtd);
+  if (isNaN(qtd) || qtd < 1) return;
 
-// Decrementa quantidade do input  
-function decrement(inputId) {  
-  const input = document.getElementById(inputId);  
-  if (input.value > input.min) {  
-    input.stepDown();  
-  }  
-}  
+  let itemExistente = carrinho.find(item => item.nome === nome);
+  if (itemExistente) {
+    itemExistente.qtd += qtd;
+  } else {
+    carrinho.push({ nome, preco, qtd });
+  }
+  atualizarCarrinho();
+}
 
-const carrinhoUl = document.getElementById("Carrinho");  
-const totalSpan = document.getElementById("total");  
-const footerCarrinho = document.getElementById("Footer3");  
-const selectPagamento = document.getElementById("pagamento");  
-const trocoDiv = document.getElementById("trocoDiv");  
+function atualizarCarrinho() {
+  const carrinhoUL = document.getElementById("Carrinho");
+  carrinhoUL.innerHTML = "";
+  let total = 0;
 
-// Função para adicionar item  
-function adicionarCarrinho(nome, preco, qtd) {  
-  qtd = parseInt(qtd);  
-  if (isNaN(qtd) || qtd < 1) qtd = 1;  
+  carrinho.forEach((item, i) => {
+    let li = document.createElement("li");
+    li.textContent = `${item.qtd}x ${item.nome} - R$ ${(item.qtd * item.preco).toFixed(2)}`;
 
-  let item = carrinho.find(i => i.nome === nome);  
+    let btnRemover = document.createElement("button");
+    btnRemover.textContent = "❌";
+    btnRemover.onclick = () => removerItem(i);
 
-  if (item) {  
-    item.qtd += qtd;  
-  } else {  
-    carrinho.push({ nome, preco, qtd });  
-  }  
+    li.appendChild(btnRemover);
+    carrinhoUL.appendChild(li);
 
-  atualizarCarrinho();  
-}  
+    total += item.qtd * item.preco;
+  });
 
-// Atualiza carrinho e mostra footer  
-function atualizarCarrinho() {  
-  carrinhoUl.innerHTML = "";  
-  let total = 0;  
+  totalSpan.textContent = total.toFixed(2);
+}
 
-  carrinho.forEach((item, index) => {  
-    let li = document.createElement("li");  
-    li.innerHTML = `  
-      ${item.nome} - R$ ${item.preco} x ${item.qtd} = R$ ${(item.preco * item.qtd).toFixed(2)}  
-      <button onclick="alterarQtd(${index},1)">+</button>  
-      <button onclick="alterarQtd(${index},-1)">-</button>  
-      <button onclick="removerItem(${index})">❌</button>  
-    `;  
-    carrinhoUl.appendChild(li);  
+function removerItem(i) {
+  carrinho.splice(i, 1);
+  atualizarCarrinho();
+}
 
-    total += item.qtd * item.preco;  
-  });  
+// Incrementar e decrementar quantidades
+function increment(id) {
+  let input = document.getElementById(id);
+  input.value = parseInt(input.value) + 1;
+}
 
-  totalSpan.textContent = total.toFixed(2);  
+function decrement(id) {
+  let input = document.getElementById(id);
+  if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
+}
 
-  footerCarrinho.style.display = carrinho.length > 0 ? "flex" : "none";  
-}  
+// Mostrar/ocultar campos de endereço conforme o tipo de entrega
+document.querySelectorAll("input[name='tipoEntrega']").forEach(radio => {
+  radio.addEventListener("change", e => {
+    document.getElementById("enderecoCampos").style.display =
+      e.target.value === "entrega" ? "block" : "none";
+  });
+});
 
-// Alterar quantidade  
-function alterarQtd(index, delta) {  
-  carrinho[index].qtd += delta;  
-  if (carrinho[index].qtd < 1) {  
-    carrinho.splice(index, 1);  
-  }  
-  atualizarCarrinho();  
-}  
-
-// Remover item  
-function removerItem(index) {  
-  carrinho.splice(index, 1);  
-  atualizarCarrinho();  
-}  
-
-// Mostrar campo "troco" se escolher dinheiro  
-selectPagamento.addEventListener("change", () => {  
-  trocoDiv.style.display = selectPagamento.value === "dinheiro" ? "block" : "none";  
-});  
-
-// Atualiza taxa automaticamente ao mudar de lugar  
-const lugarSelect = document.getElementById("lugar");  
-lugarSelect.addEventListener("change", () => {  
-  const lugar = lugarSelect.value;  
-  if (!lugar) return;  
-
-  let totalQtd = carrinho.reduce((acc, item) => acc + item.qtd, 0);  
-
-  if (totalQtd < 3) {  
-    alert("⚠️ Pedido mínimo é de 3 chup-chups para qualquer local.");  
-    return;  
-  }  
-
-  let taxa = 2; // padrão  
-  if (lugar === "Santana") taxa = 4;  
-  else if (lugar === "Maria Manteiga") taxa = 3;  
-
-  alert(`📍 Entrega em ${lugar}: taxa de R$ ${taxa},00.`);  
-});  
-
-// Finalizar pedido  
-document.getElementById("finalizar").addEventListener("click", () => {  
-  if (carrinho.length === 0) {  
-    alert("Seu carrinho está vazio!");  
-    return;  
-  }  
-
-  let pagamento = document.getElementById("pagamento").value;  
-  if (!pagamento) {  
-    alert("Escolha uma forma de pagamento!");  
-    return;  
-  }  
-
-  // abre popup para escolher entrega/retirada e endereço  
-  document.getElementById("popup").style.display = "block";  
-});  
-
-// fechar popup  
-document.getElementById("fecharPopup").onclick = function() {  
-  document.getElementById("popup").style.display = "none";  
-};  
-
-// alternar entre retirada e entrega  
-document.querySelectorAll("input[name='tipoEntrega']").forEach(radio => {  
-  radio.addEventListener("change", function() {  
-    let enderecoCampos = document.getElementById("enderecoCampos");  
-    enderecoCampos.style.display = this.value === "entrega" ? "block" : "none";  
-  });  
-});  
-
-// confirmar pedido e enviar pro WhatsApp  
 function confirmarPedido() {
   let pagamento = document.getElementById("pagamento").value;
   let tipoEntrega = document.querySelector("input[name='tipoEntrega']:checked").value;
@@ -151,10 +81,10 @@ function confirmarPedido() {
     }
   }
 
-  // Monta o resumo do pedido
-  let msg = "Olá, gostaria de fazer o pedido:\n";
+  // Monta mensagem do pedido
+  let msg = "🍨 *Pedido Realizado*\n\n";
   carrinho.forEach(item => {
-    msg += `${item.qtd}x ${item.nome} - R$ ${item.preco} = R$ ${(item.qtd * item.preco).toFixed(2)}\n`;
+    msg += `${item.qtd}x ${item.nome} - R$ ${(item.qtd * item.preco).toFixed(2)}\n`;
   });
 
   let totalCarrinho = parseFloat(totalSpan.textContent);
@@ -163,12 +93,10 @@ function confirmarPedido() {
   if (tipoEntrega === "entrega") {
     let bairro = document.getElementById("bairro").value;
 
-    // Regras de taxa
+    // 🔹 Regras de taxa de entrega
     if (bairro === "Santana") {
       if (totalCarrinho < 30) {
         taxaEntrega = 2;
-      } else {
-        taxaEntrega = 0;
       }
     } else if (bairro === "São José") taxaEntrega = 3;
     else if (bairro === "Bairro Floresta") taxaEntrega = 3;
@@ -179,16 +107,16 @@ function confirmarPedido() {
 
     totalCarrinho += taxaEntrega;
 
-    msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
-    msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;
+    msg += `\n🚚 *Taxa de entrega:* R$ ${taxaEntrega.toFixed(2)}`;
+    msg += `\n💰 *Total com entrega:* R$ ${totalCarrinho.toFixed(2)}`;
   } else {
-    msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;
+    msg += `\n💰 *Total:* R$ ${totalCarrinho.toFixed(2)}`;
   }
 
-  msg += `\nPagamento: ${pagamento}`;
+  msg += `\n\n💳 *Pagamento:* ${pagamento}`;
   if (pagamento === "dinheiro") {
     let troco = document.getElementById("troco").value || "sem troco";
-    msg += `\nTroco: ${troco}`;
+    msg += `\n💵 *Troco:* ${troco}`;
   }
 
   if (tipoEntrega === "entrega") {
@@ -198,13 +126,26 @@ function confirmarPedido() {
     let bairro = document.getElementById("bairro").value.trim();
     let referencia = document.getElementById("referencia").value.trim() || "Não informado";
 
-    msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
+    msg += `\n\n📦 *Entrega para:*\n👤 ${nome}\n📍 ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
   } else {
-    msg += "\n\n📦 Retirada na loja.";
+    msg += "\n\n📦 *Retirada na loja*";
   }
-
-  document.getElementById("popup").style.display = "none";
 
   const telefone = "5527997765557";
   window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");
+
+  document.querySelector(".popup-content").style.display = "none";
 }
+
+// Exibe aviso automático quando for Santana e total < 30
+document.getElementById("bairro").addEventListener("change", () => {
+  const bairro = document.getElementById("bairro").value;
+  const total = parseFloat(totalSpan.textContent);
+  const aviso = document.querySelector(".aviso");
+
+  if (bairro === "Santana" && total < 30) {
+    aviso.innerHTML = "⚠️ Pedido abaixo de R$30 em Santana tem taxa de R$2,00.";
+  } else {
+    aviso.innerHTML = "";
+  }
+});
