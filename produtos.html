@@ -367,7 +367,7 @@
     <button class="finalizar" id="finalizar">Finalizar Pedido</button>
 </footer>
 
-<div class="popup-content">
+<div id="popup" class="popup-content" style="display:none;">
   <span id="fecharPopup" class="fechar">&times;</span>
   <h2>Finalizar Pedido</h2>
 
@@ -378,7 +378,6 @@
 
   <div id="enderecoCampos" style="display: none;">
     <h3>Endereço para Entrega</h3>
-
     <label for="nome">Nome:</label>
     <input type="text" id="nome" placeholder="Seu nome">
 
@@ -418,7 +417,6 @@
   </div>
 
   <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar Pedido</button>
-</div>
 </div>
   <h1 class="txth1">TRADICIONAIS</h1>
 
