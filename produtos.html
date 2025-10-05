@@ -374,23 +374,23 @@
   <h2>Finalizar Pedido</h2>
 
   <div class="entrega-tipo">
-    <label><input type="radio" name="tipoEntrega" value="retirada" checked> Retirar na loja</label>
-    <label><input type="radio" name="tipoEntrega" value="entrega"> Entregar</label>
+    <label><input type="radio" name="tipoEntregaPopup" value="retirada" checked> Retirar na loja</label>
+    <label><input type="radio" name="tipoEntregaPopup" value="entrega"> Entregar</label>
   </div>
 
-  <div id="enderecoCampos" style="display: none;">
+  <div id="enderecoCamposPopup" style="display: none;">
     <h3>Endereço para Entrega</h3>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" placeholder="Seu nome">
+    <label for="nomePopup">Nome:</label>
+    <input type="text" id="nomePopup" placeholder="Seu nome">
 
-    <label for="rua">Rua:</label>
-    <input type="text" id="rua" placeholder="Rua">
+    <label for="ruaPopup">Rua:</label>
+    <input type="text" id="ruaPopup" placeholder="Rua">
 
-    <label for="numero">Número:</label>
-    <input type="text" id="numero" placeholder="Número">
+    <label for="numeroPopup">Número:</label>
+    <input type="text" id="numeroPopup" placeholder="Número">
 
-    <label for="bairro">Bairro:</label>
-    <select id="bairro">
+    <label for="bairroPopup">Bairro:</label>
+    <select id="bairroPopup">
       <option value="">Selecione o bairro</option>
       <option value="Santana">Santana</option>
       <option value="São José">São José</option>
@@ -401,22 +401,25 @@
       <option value="Centro">Centro</option>
     </select>
 
-    <label for="referencia">Referência:</label>
-    <input type="text" id="referencia" placeholder="Ponto de referência (opcional)">
+    <label for="referenciaPopup">Referência:</label>
+    <input type="text" id="referenciaPopup" placeholder="Ponto de referência (opcional)">
   </div>
 
   <h3>Forma de Pagamento</h3>
-  <select id="pagamento">
+  <select id="pagamentoPopup">
     <option value="">Selecione</option>
     <option value="pix">Pix</option>
     <option value="dinheiro">Dinheiro</option>
     <option value="cartão">Cartão</option>
   </select>
 
-  <div id="trocoDiv" style="display: none;">
-    <label for="troco">Troco para:</label>
-    <input type="text" id="troco" placeholder="Ex: 50,00">
+  <div id="trocoDivPopup" style="display: none;">
+    <label for="trocoPopup">Troco para:</label>
+    <input type="text" id="trocoPopup" placeholder="Ex: 50,00">
   </div>
+
+  <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar Pedido</button>
+</div>
 
   <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar Pedido</button>
 </div>
