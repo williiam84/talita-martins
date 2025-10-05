@@ -130,138 +130,81 @@ document.querySelectorAll("input[name='tipoEntrega']").forEach(radio => {
 });  
 
 // confirmar pedido e enviar pro WhatsApp  
-function confirmarPedido() {  
-  // 🔒 valida pedido mínimo  
-  let totalQtd = carrinho.reduce((acc, item) => acc + item.qtd, 0);  
-  if (totalQtd < 3) {  
-    alert("⚠️ O pedido mínimo é de 3 chup-chups.");  
-    return;  
-  }  
+function confirmarPedido() {
+  let pagamento = document.getElementById("pagamento").value;
+  let tipoEntrega = document.querySelector("input[name='tipoEntrega']:checked").value;
 
-  let pagamento = document.getElementById("pagamento").value;  
-  let tipoEntrega = document.querySelector("input[name='tipoEntrega']:checked").value;  
+  if (!pagamento) {
+    alert("Selecione a forma de pagamento!");
+    return;
+  }
 
-  if (!pagamento) {  
-    alert("Selecione a forma de pagamento!");  
-    return;  
-  }  
+  if (tipoEntrega === "entrega") {
+    let nome = document.getElementById("nome").value.trim();
+    let rua = document.getElementById("rua").value.trim();
+    let numero = document.getElementById("numero").value.trim();
+    let bairro = document.getElementById("bairro").value.trim();
 
-  // valida endereço caso seja entrega  
-  if (tipoEntrega === "entrega") {  
-    let nome = document.getElementById("nome").value.trim();  
-    let rua = document.getElementById("rua").value.trim();  
-    let numero = document.getElementById("numero").value.trim();  
-    let bairro = document.getElementById("bairro").value.trim();  
+    if (!nome || !rua || !numero || !bairro) {
+      alert("Preencha todos os campos obrigatórios para entrega!");
+      return;
+    }
+  }
 
-    if (!nome || !rua || !numero || !bairro) {  
-      alert("Preencha todos os campos obrigatórios para entrega!");  
-      return;  
-    }  
-  }  
+  // Monta o resumo do pedido
+  let msg = "Olá, gostaria de fazer o pedido:\n";
+  carrinho.forEach(item => {
+    msg += `${item.qtd}x ${item.nome} - R$ ${item.preco} = R$ ${(item.qtd * item.preco).toFixed(2)}\n`;
+  });
 
-  // monta mensagem do pedido  
-  let msg = "Olá, gostaria de fazer o pedido:\n";  
-  carrinho.forEach(item => {  
-    msg += `${item.qtd}x ${item.nome} - R$ ${item.preco} = R$ ${(item.preco * item.qtd).toFixed(2)}\n`;  
-  });  
+  let totalCarrinho = parseFloat(totalSpan.textContent);
+  let taxaEntrega = 0;
 
-  let totalCarrinho = parseFloat(totalSpan.textContent);  
+  if (tipoEntrega === "entrega") {
+    let bairro = document.getElementById("bairro").value;
 
-  if (tipoEntrega === "entrega") {  
-    let lugar = document.getElementById("lugar").value;  
-    let taxaEntrega = 0;  
-    if (lugar === "Santana") taxaEntrega = 4;  
-    else if (lugar === "Maria Manteiga") taxaEntrega = 3;  
-    totalCarrinho += taxaEntrega;  
-    msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;  
-    msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;  
-  } else {  
-    msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;  
-  }  
+    // Regras de taxa
+    if (bairro === "Santana") {
+      if (totalCarrinho < 30) {
+        taxaEntrega = 2;
+      } else {
+        taxaEntrega = 0;
+      }
+    } else if (bairro === "São José") taxaEntrega = 3;
+    else if (bairro === "Bairro Floresta") taxaEntrega = 3;
+    else if (bairro === "Nova Betânia") taxaEntrega = 3;
+    else if (bairro === "Vila dos Pescadores") taxaEntrega = 3;
+    else if (bairro === "Bugia") taxaEntrega = 3;
+    else if (bairro === "Centro") taxaEntrega = 2;
 
-  msg += `\nPagamento: ${pagamento}`;  
-  if (pagamento === "dinheiro") {  
-    let troco = document.getElementById("troco").value || "sem troco";  
-    msg += `\nTroco: ${troco}`;  
-  }  
+    totalCarrinho += taxaEntrega;
 
-  if (tipoEntrega === "entrega") {  
-    let nome = document.getElementById("nome").value.trim();  
-    let rua = document.getElementById("rua").value.trim();  
-    let numero = document.getElementById("numero").value.trim();  
-    let bairro = document.getElementById("bairro").value.trim();  
-    let referencia = document.getElementById("referencia").value.trim() || "Não informado";  
+    msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
+    msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;
+  } else {
+    msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;
+  }
 
-    msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;  
-  } else {  
-    msg += "\n\n📦 Retirada na loja.";  
-  }  
+  msg += `\nPagamento: ${pagamento}`;
+  if (pagamento === "dinheiro") {
+    let troco = document.getElementById("troco").value || "sem troco";
+    msg += `\nTroco: ${troco}`;
+  }
 
-  document.getElementById("popup").style.display = "none";  
+  if (tipoEntrega === "entrega") {
+    let nome = document.getElementById("nome").value.trim();
+    let rua = document.getElementById("rua").value.trim();
+    let numero = document.getElementById("numero").value.trim();
+    let bairro = document.getElementById("bairro").value.trim();
+    let referencia = document.getElementById("referencia").value.trim() || "Não informado";
 
-  const telefone = "5527997765557";  
-  window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");  
-}  
+    msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
+  } else {
+    msg += "\n\n📦 Retirada na loja.";
+  }
 
-// MENU RESPONSIVO  
-const menuBtn = document.getElementById("menu-btn");  
-const navLinks = document.getElementById("nav-links");  
-menuBtn.addEventListener("click", () => {  
-  navLinks.classList.toggle("show");  
-});  
+  document.getElementById("popup").style.display = "none";
 
-// ENTREGA - mostra tempo no popup  
-function delivery() {  
-  let lugar = document.getElementById("lugar").value;  
-  let txt = document.getElementById("txt");  
-  let tempo = document.getElementById("tempo");  
-
-  let mensagem = "";  
-  let minutos = "";  
-
-  if (lugar === "Santana") {  
-    mensagem = "⏱️ Entrega em Santana";  
-    minutos = "25 min <i class='fa-solid fa-clock'></i>";  
-  } else if (lugar === "Maria Manteiga") {  
-    mensagem = "⏱️ Entrega em Maria Manteiga";  
-    minutos = "30 min <i class='fa-solid fa-clock'></i>";  
-  } else if (lugar === "nao") {  
-    mensagem = "⏱️ Entrega em outros locais";  
-    minutos = "40 min <i class='fa-solid fa-clock'></i>";  
-  } else {  
-    mensagem = "Por favor, selecione um local de entrega.";  
-    minutos = "";  
-  }  
-
-  txt.innerHTML = mensagem;  
-  tempo.innerHTML = minutos;  
-  document.getElementById("popup1").style.display = "flex";  
-}  
-
-// Fechar popup no "X"  
-document.getElementById("fecharPopup1").addEventListener("click", () => {  
-  document.getElementById("popup1").style.display = "none";  
-});  
-
-// SLIDES  
-let slideIndex = 1;   
-mostrarSlide(slideIndex);  
-
-function mudarSlide(n) {  
-  mostrarSlide(slideIndex += n);  
-}  
-
-function mostrarSlide(n) {  
-  let slides = document.getElementsByClassName("slide");  
-  if (n > slides.length) { slideIndex = 1 }  
-  if (n < 1) { slideIndex = slides.length }  
-
-  for (let i = 0; i < slides.length; i++) {  
-    slides[i].style.display = "none";  
-  }  
-  slides[slideIndex - 1].style.display = "block";  
-}  
-
-setInterval(() => {  
-  mudarSlide(1);  
-}, 4000);
+  const telefone = "5527997765557";
+  window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");
+}
