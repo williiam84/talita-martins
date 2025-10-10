@@ -7,7 +7,10 @@ body {
 *{
     font-family: "Poppins", sans-serif;
 }
-label{
+.entrega-tipo label{
+color: white;
+}
+.entrega-tipo{
 color: white;
 }
 form {
