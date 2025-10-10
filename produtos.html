@@ -359,7 +359,27 @@
 </button>
 </footer>
 
-<div id="popup" class="popup-content" style="display:none;">
+er id="Footer3" class="footer3">
+  <ul id="Carrinho"></ul>
+  <p class="txt">Total: R$ <span id="total">0</span></p>
+
+  <select id="pagamento">
+    <option value="">Selecione forma de pagamento</option>
+    <option value="pix">Pix</option>
+    <option value="dinheiro">Dinheiro</option>
+    <option value="cartão">Cartão</option>
+  </select>
+
+  <div id="trocoDiv" class="hidden">
+    <label for="troco">Troco para:</label>
+    <input class="inp" type="text" id="troco" placeholder="Ex: 50,00">
+  </div>
+
+  <button class="finalizar" id="finalizar">Finalizar Pedido</button>
+</footer>
+
+<!-- POPUP -->
+<div id="popup" class="popup-content">
   <span id="fecharPopup" class="fechar">&times;</span>
   <h2>Finalizar Pedido</h2>
 
@@ -368,7 +388,7 @@
     <label><input type="radio" name="tipoEntregaPopup" value="entrega"> Entregar</label>
   </div>
 
-  <div id="enderecoCamposPopup" style="display: none;">
+  <div id="enderecoCamposPopup" class="hidden">
     <h3>Endereço para Entrega</h3>
     <label for="nomePopup">Nome:</label>
     <input type="text" id="nomePopup" placeholder="Seu nome">
@@ -403,15 +423,12 @@
     <option value="cartão">Cartão</option>
   </select>
 
-  <div id="trocoDivPopup" style="display: none;">
+  <div id="trocoDivPopup" class="hidden">
     <label for="trocoPopup">Troco para:</label>
     <input type="text" id="trocoPopup" placeholder="Ex: 50,00">
   </div>
 
-  <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar Pedido</button>
-</div>
-
-  <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar Pedido</button>
+  <button id="confirmarPedido">Confirmar Pedido</button>
 </div>
   <h1 class="txth1">TRADICIONAIS</h1>
 
