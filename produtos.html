@@ -344,23 +344,20 @@
     </aside>
   </section>
 
-er id="Footer3" class="footer3">
-  <ul id="Carrinho"></ul>
-  <p class="txt">Total: R$ <span id="total">0</span></p>
+<footer id="Footer3" class="footer3">
+    <ul id="Carrinho"></ul>
+    <p class="txt">Total: R$ <span id="total">0</span></p>
 
-  <select id="pagamento">
-    <option value="">Selecione forma de pagamento</option>
-    <option value="pix">Pix</option>
-    <option value="dinheiro">Dinheiro</option>
-    <option value="cartão">Cartão</option>
-  </select>
 
-  <div id="trocoDiv" class="hidden">
-    <label for="troco">Troco para:</label>
-    <input class="inp" type="text" id="troco" placeholder="Ex: 50,00">
-  </div>
+    <div id="trocoDiv" style="display:none;">
+        <label for="troco">Precisa de troco para:</label>
+        <input class="inp" type="text" id="troco" placeholder="Ex: 50 reais">
+    </div>
 
-  <button class="finalizar" id="finalizar">Finalizar Pedido</button>
+    <p id="res"></p>
+    <button class="finalizar" id="finalizar" onclick="document.getElementById('popup').style.display='block'">
+  Finalizar Pedido
+</button>
 </footer>
 
 <!-- POPUP -->
