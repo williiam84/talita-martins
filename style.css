@@ -7,12 +7,6 @@ body {
 *{
     font-family: "Poppins", sans-serif;
 }
-.entrega-tipo label{
-color: white;
-}
-.entrega-tipo{
-color: white;
-}
 form {
     position: absolute;
     left: 50%;
@@ -2758,7 +2752,8 @@ body {
     font-size: 15px;
     font-weight: 600;
     min-width: 140px;              /* largura fixa pro label */
-    text-align: right;             /* deixa alinhado bonitinho */
+    text-align: right;  
+				coloprr: white;           /* deixa alinhado bonitinho */
   }
 
   #popup input,
