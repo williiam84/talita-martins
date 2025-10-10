@@ -4148,6 +4148,19 @@ left: 20px;
   background: rgba(0,0,0,0.5); /* fundo semi-transparente */
   z-index: 9999; /* maior que o footer */
   display: none; /* começa escondido */
+  color: white;
+}
+.footer3 #Carrinho{
+position: absolute;
+left: 25%;
+}
+.footer3 .txt{
+position: absolute;
+left: 35%;
+}
+.footer3 .Finalizar{
+position:absolute;
+left: 45%;
 }
 #confirmarPedido {
   width: 100%;
