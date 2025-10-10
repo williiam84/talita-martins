@@ -4136,11 +4136,14 @@ body {
   max-width: 300px;
 }
 #popup {
-  width: 90%;
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 8px;
+  position: fixed; /* Fica fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* fundo semi-transparente */
+  z-index: 9999; /* maior que o footer */
+  display: none; /* começa escondido */
 }
 #confirmarPedido {
   width: 100%;
