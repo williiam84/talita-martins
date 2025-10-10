@@ -2893,6 +2893,7 @@ body {
   font-weight: bold;
   color: #333;
   margin-bottom: 15px;
+	
 }
 
 /* Lista do carrinho */
@@ -2902,6 +2903,8 @@ body {
   margin: 0 0 10px 0;
   max-height: 120px;
   overflow-y: auto;
+position: absolute;
+left: 20px;
 }
 .footer3 p {
     position: absolute;
@@ -2978,7 +2981,7 @@ body {
 .finalizar {
     position: absolute;
     top: 50px;
-    left: 90%;
+    left: 75%;
   width: 100px;
   padding: 14px;
   margin-top: 15px;
