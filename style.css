@@ -5905,7 +5905,7 @@ left: 20px;
 }
 .footer3 .finalizar {
     position: absolute;
-    left: 15%;
+    left:5%;
 }
 .footer3 .forma-pagamento {
     position: absolute;
@@ -5922,11 +5922,11 @@ left: 25%;
 }
 .footer3 .txt{
 position: absolute;
-left: 35%;
+left: 25%;
 }
 .footer3 .Finalizar{
 position:absolute;
-left: 45%;
+left:30%;
 }
 .footer3 .forma-pagamento input {
     position: absolute;
