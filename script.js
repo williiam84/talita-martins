@@ -1,144 +1,130 @@
+// ======= INCREMENTO E DECREMENTO =======
+function increment(id) {
+    let input = document.getElementById(id);
+    input.value = parseInt(input.value) + 1;
+}
+
+function decrement(id) {
+    let input = document.getElementById(id);
+    if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+    }
+}
+
+// ======= CARRINHO =======
 let carrinho = [];
+const carrinhoUl = document.getElementById('Carrinho');
+const totalSpan = document.getElementById('total');
 
-// Elementos
-const carrinhoUl = document.getElementById("Carrinho");
-const totalSpan = document.getElementById("total");
-const footerCarrinho = document.getElementById("Footer3");
+function adicionarCarrinho(nome, preco, quantidade) {
+    quantidade = parseInt(quantidade);
+    if (quantidade <= 0) return;
 
-const popup = document.getElementById("popup");
-const fecharPopup = document.getElementById("fecharPopup");
-const finalizar = document.getElementById("finalizar");
+    // Verifica se produto já existe
+    const existente = carrinho.find(item => item.nome === nome);
+    if (existente) {
+        existente.quantidade += quantidade;
+    } else {
+        carrinho.push({ nome, preco, quantidade });
+    }
+    atualizarCarrinho();
+}
 
-const tipoEntregaRadios = document.querySelectorAll("input[name='tipoEntregaPopup']");
-const enderecoCampos = document.getElementById("enderecoCamposPopup");
-
-const pagamentoPopup = document.getElementById("pagamentoPopup");
-const trocoDivPopup = document.getElementById("trocoDivPopup");
-
-// Funções do carrinho
 function atualizarCarrinho() {
-  carrinhoUl.innerHTML = "";
-  let total = 0;
+    carrinhoUl.innerHTML = '';
+    let total = 0;
 
-  carrinho.forEach((item, index) => {
-    let li = document.createElement("li");
-    li.innerHTML = `
-      ${item.nome} - R$ ${item.preco} x ${item.qtd} = R$ ${(item.preco*item.qtd).toFixed(2)}
-      <button onclick="alterarQtd(${index},1)">+</button>
-      <button onclick="alterarQtd(${index},-1)">-</button>
-      <button onclick="removerItem(${index})">❌</button>
-    `;
-    carrinhoUl.appendChild(li);
-    total += item.qtd * item.preco;
-  });
+    carrinho.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.nome} - ${item.quantidade} x R$${item.preco.toFixed(2)}`;
+        carrinhoUl.appendChild(li);
+        total += item.preco * item.quantidade;
+    });
 
-  totalSpan.textContent = total.toFixed(2);
-  footerCarrinho.style.display = carrinho.length > 0 ? "flex" : "none";
+    totalSpan.textContent = total.toFixed(2);
 }
 
-function adicionarCarrinho(nome, preco, qtd = 1) {
-  let item = carrinho.find(i => i.nome === nome);
-  if (item) item.qtd += qtd;
-  else carrinho.push({ nome, preco, qtd });
-  atualizarCarrinho();
-}
+// ======= POPUP =======
+const popup = document.getElementById('popup');
+const fecharPopup = document.getElementById('fecharPopup');
 
-function alterarQtd(index, delta) {
-  carrinho[index].qtd += delta;
-  if (carrinho[index].qtd < 1) carrinho.splice(index, 1);
-  atualizarCarrinho();
-}
-
-function removerItem(index) {
-  carrinho.splice(index, 1);
-  atualizarCarrinho();
-}
-
-// Abrir popup
-finalizar.addEventListener("click", () => {
-  if (carrinho.length === 0) { 
-    alert("Seu carrinho está vazio!"); 
-    return; 
-  }
-  popup.style.display = "block";
+document.getElementById('finalizar').addEventListener('click', () => {
+    popup.style.display = 'block';
 });
 
-// Fechar popup
-fecharPopup.addEventListener("click", () => {
-  popup.style.display = "none";
+fecharPopup.addEventListener('click', () => {
+    popup.style.display = 'none';
 });
 
-// Alternar entre retirada e entrega
+window.addEventListener('click', (e) => {
+    if (e.target === popup) popup.style.display = 'none';
+});
+
+// ======= MOSTRAR CAMPOS DE ENDEREÇO =======
+const tipoEntregaRadios = document.querySelectorAll('input[name="tipoEntregaPopup"]');
+const enderecoCamposPopup = document.getElementById('enderecoCamposPopup');
+
 tipoEntregaRadios.forEach(radio => {
-  radio.addEventListener("change", () => {
-    enderecoCampos.style.display = radio.value === "entrega" ? "block" : "none";
-  });
+    radio.addEventListener('change', () => {
+        if (radio.value === 'entrega') {
+            enderecoCamposPopup.classList.remove('hidden');
+        } else {
+            enderecoCamposPopup.classList.add('hidden');
+        }
+    });
 });
 
-// Mostrar troco se pagamento for dinheiro
-pagamentoPopup.addEventListener("change", () => {
-  trocoDivPopup.style.display = pagamentoPopup.value === "dinheiro" ? "block" : "none";
+// ======= MOSTRAR TROCO =======
+const pagamentoPopup = document.getElementById('pagamentoPopup');
+const trocoDivPopup = document.getElementById('trocoDivPopup');
+
+pagamentoPopup.addEventListener('change', () => {
+    if (pagamentoPopup.value === 'dinheiro') {
+        trocoDivPopup.classList.remove('hidden');
+    } else {
+        trocoDivPopup.classList.add('hidden');
+    }
 });
 
-// Confirmar pedido e enviar para WhatsApp
-document.getElementById("confirmarPedido").addEventListener("click", () => {
-  if (carrinho.length === 0) { 
-    alert("Seu carrinho está vazio!"); 
-    return; 
-  }
+// ======= CONFIRMAR PEDIDO =======
+document.getElementById('confirmarPedido').addEventListener('click', function() {
+    const tipoEntrega = document.querySelector('input[name="tipoEntregaPopup"]:checked').value;
 
-  let pagamento = pagamentoPopup.value;
-  if (!pagamento) { 
-    alert("Selecione a forma de pagamento!"); 
-    return; 
-  }
+    if (tipoEntrega === 'entrega') {
+        const nome = document.getElementById('nomePopup').value.trim();
+        const rua = document.getElementById('ruaPopup').value.trim();
+        const numero = document.getElementById('numeroPopup').value.trim();
+        const bairro = document.getElementById('bairroPopup').value.trim();
 
-  let tipoEntrega = document.querySelector("input[name='tipoEntregaPopup']:checked").value;
-  let totalCarrinho = parseFloat(totalSpan.textContent);
-  let taxaEntrega = 0;
-
-  let msg = "Olá, gostaria de fazer o pedido:\n";
-  carrinho.forEach(item => {
-    msg += `${item.qtd}x ${item.nome} - R$ ${item.preco} = R$ ${(item.qtd*item.preco).toFixed(2)}\n`;
-  });
-
-  if (tipoEntrega === "entrega") {
-    let nome = document.getElementById("nomePopup").value.trim();
-    let rua = document.getElementById("ruaPopup").value.trim();
-    let numero = document.getElementById("numeroPopup").value.trim();
-    let bairro = document.getElementById("bairroPopup").value.trim();
-
-    if (!nome || !rua || !numero || !bairro) { 
-      alert("Preencha todos os campos obrigatórios para entrega!"); 
-      return; 
+        if (!nome || !rua || !numero || !bairro) {
+            alert("Preencha todos os campos de endereço antes de finalizar o pedido!");
+            return;
+        }
     }
 
-    // Calcular taxa de entrega
-    if (bairro === "Santana") taxaEntrega = totalCarrinho < 30 ? 2 : 0;
-    else if (["São José","Bairro Floresta","Nova Betânia","Vila dos Pescadores","Bugia"].includes(bairro)) taxaEntrega = 3;
-    else if (bairro === "Centro") taxaEntrega = 2;
+    if (pagamentoPopup.value === '') {
+        alert("Selecione a forma de pagamento!");
+        return;
+    }
 
-    totalCarrinho += taxaEntrega;
+    if (pagamentoPopup.value === 'dinheiro') {
+        const troco = document.getElementById('trocoPopup').value.trim();
+        if (!troco) {
+            alert("Informe o valor do troco!");
+            return;
+        }
+    }
 
-    msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
-    msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
 
-    let referencia = document.getElementById("referenciaPopup").value.trim() || "Não informado";
-    msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
-  } else {
-    msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;
-    msg += `\n\n📦 Retirada na loja`;
-  }
+    // Se tudo estiver certo
+    alert("Pedido confirmado!");
+    popup.style.display = 'none';
 
-  msg += `\nPagamento: ${pagamento}`;
-  if (pagamento === "dinheiro") {
-    let troco = document.getElementById("trocoPopup").value || "sem troco";
-    msg += `\nTroco: ${troco}`;
-  }
-
-  // Abrir WhatsApp
-  const telefone = "5527997765557";
-  window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`, "_blank");
-
-  popup.style.display = "none";
+    // Limpa o carrinho
+    carrinho = [];
+    atualizarCarrinho();
 });
