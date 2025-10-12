@@ -129,32 +129,32 @@ document.getElementById("confirmarPedido").addEventListener("click", () => {
         }
 
         // ---- Calcular taxa de entrega ----
-        const bairrosTaxa2 = [
+        const bairrosComTaxa2 = [
             "São Jose", "Urbens", "Vila dos Pescadores", "Antonio Lopez", "Bugia", "Centro",
             "Chácara do Atlântico", "Coabh", "Coabh 2", "Favica", "Floresta", "Guaxindimba",
             "Marcilio Dias 1", "Marcilio Dias 2", "Maria Manteiga", "Nossa Senhora Aparecida",
             "Nova Bethânia", "Nova Esperança", "Novo Horizonte", "Quilombo Novo",
-            "Santana", "Santiago", "Santo Amaro"
+            "Santiago", "Santo Amaro"
         ];
 
         if (bairro === "Santana") {
             taxaEntrega = 4;
-            taxaTexto = "Taxa fixa de R$ 4,00 para Santana";
-        } else if (bairrosTaxa2.includes(bairro)) {
+            taxaTexto = "🚚 Taxa fixa de R$ 4,00 (Santana)";
+        } else if (bairrosComTaxa2.includes(bairro)) {
             taxaEntrega = totalCarrinho < 30 ? 2 : 0;
             taxaTexto = taxaEntrega > 0
-                ? "Taxa de R$ 2,00 (pedido abaixo de R$ 30,00)"
-                : "Taxa grátis (pedido acima de R$ 30,00)";
+                ? "🚚 Taxa de R$ 2,00 (pedido abaixo de R$ 30,00)"
+                : "🚚 Entrega grátis (pedido acima de R$ 30,00)";
         } else {
             taxaEntrega = 0;
-            taxaTexto = "Sem taxa de entrega para este bairro";
+            taxaTexto = "🚚 Sem taxa de entrega para este bairro";
         }
 
         totalCarrinho += taxaEntrega;
 
         const referencia = document.getElementById("referenciaPopup").value.trim() || "Não informado";
 
-        msg += `\n🚚 *Entrega*\n📍 Bairro: ${bairro}\n💰 ${taxaTexto}`;
+        msg += `\n\n📦 *Entrega*\n📍 Bairro: ${bairro}\n${taxaTexto}`;
         msg += `\n💵 Total com entrega: R$ ${totalCarrinho.toFixed(2)}`;
         msg += `\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
     } else {
