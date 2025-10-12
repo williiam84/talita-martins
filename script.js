@@ -110,9 +110,9 @@ document.getElementById("confirmarPedido").addEventListener("click", () => {
     let tipoEntrega = document.querySelector("input[name='tipoEntregaPopup']:checked").value;
     let totalCarrinho = parseFloat(totalSpan.textContent);
     let taxaEntrega = 0;
+    let taxaTexto = "";
 
-    // Validação do endereço se for entrega
-    let msg = "Olá, gostaria de fazer o pedido:\n";
+    let msg = "🍧 *Novo Pedido Loja de Chup-Chup* 🍧\n\n";
     carrinho.forEach(item => {
         msg += `${item.qtd}x ${item.nome} - R$ ${item.preco.toFixed(2)} = R$ ${(item.qtd * item.preco).toFixed(2)}\n`;
     });
@@ -128,24 +128,40 @@ document.getElementById("confirmarPedido").addEventListener("click", () => {
             return;
         }
 
-        // Calcular taxa de entrega
-        if (bairro === "Santana") taxaEntrega = totalCarrinho < 30 ? 2 : 0;
-        else if (["São José", "Bairro Floresta", "Nova Betânia", "Vila dos Pescadores", "Bugia"].includes(bairro)) taxaEntrega = 3;
-        else if (bairro === "Centro") taxaEntrega = 2;
+        // ---- Calcular taxa de entrega ----
+        const bairrosTaxa2 = [
+            "São Jose", "Urbens", "Vila dos Pescadores", "Antonio Lopez", "Bugia", "Centro",
+            "Chácara do Atlântico", "Coabh", "Coabh 2", "Favica", "Floresta", "Guaxindimba",
+            "Marcilio Dias 1", "Marcilio Dias 2", "Maria Manteiga", "Nossa Senhora Aparecida",
+            "Nova Bethânia", "Nova Esperança", "Novo Horizonte", "Quilombo Novo",
+            "Santana", "Santiago", "Santo Amaro"
+        ];
+
+        if (bairro === "Santana") {
+            taxaEntrega = 4;
+            taxaTexto = "Taxa fixa de R$ 4,00 para Santana";
+        } else if (bairrosTaxa2.includes(bairro)) {
+            taxaEntrega = totalCarrinho < 30 ? 2 : 0;
+            taxaTexto = taxaEntrega > 0
+                ? "Taxa de R$ 2,00 (pedido abaixo de R$ 30,00)"
+                : "Taxa grátis (pedido acima de R$ 30,00)";
+        } else {
+            taxaEntrega = 0;
+            taxaTexto = "Sem taxa de entrega para este bairro";
+        }
 
         totalCarrinho += taxaEntrega;
 
         const referencia = document.getElementById("referenciaPopup").value.trim() || "Não informado";
 
-        msg += `\nTaxa de entrega: R$ ${taxaEntrega.toFixed(2)}`;
-        msg += `\nTotal com entrega: R$ ${totalCarrinho.toFixed(2)}`;
-        msg += `\n\n📦 Entrega para:\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
+        msg += `\n🚚 *Entrega*\n📍 Bairro: ${bairro}\n💰 ${taxaTexto}`;
+        msg += `\n💵 Total com entrega: R$ ${totalCarrinho.toFixed(2)}`;
+        msg += `\n👤 Nome: ${nome}\n📍 Endereço: ${rua}, ${numero} - ${bairro}\n🗺️ Referência: ${referencia}`;
     } else {
-        msg += `\nTotal: R$ ${totalCarrinho.toFixed(2)}`;
-        msg += `\n\n📦 Retirada na loja`;
+        msg += `\n📦 Retirada na loja\n💵 Total: R$ ${totalCarrinho.toFixed(2)}`;
     }
 
-    msg += `\nPagamento: ${pagamento}`;
+    msg += `\n💳 Pagamento: ${pagamento}`;
 
     if (pagamento === "dinheiro") {
         const troco = document.getElementById("trocoPopup").value.trim();
@@ -153,7 +169,7 @@ document.getElementById("confirmarPedido").addEventListener("click", () => {
             alert("Informe o valor do troco para pagamento em dinheiro!");
             return;
         }
-        msg += `\nTroco: ${troco}`;
+        msg += `\n💰 Troco para: ${troco}`;
     }
 
     // Abrir WhatsApp
