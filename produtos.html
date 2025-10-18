@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="style.css">
       <link rel="shortcut icon" href="midia/favicon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+/* Deixa o botão X menor e alinhado no canto */
+#fecharPopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px; /* tamanho menor */
+  background: none;
+  border: none;
+  color: white; /* branco */
+  cursor: pointer;
+}
+
+/* Deixa os textos brancos dentro do pop-up */
+#popup label, 
+#popup h2, 
+#popup select, 
+#popup input {
+  color: white;
+}
+
+/* Fundo escuro pro pop-up (pra o branco aparecer bem) */
+#popup {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
 </head>
 <body>
     <header>
