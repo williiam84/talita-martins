@@ -85,7 +85,8 @@ fecharPopup.addEventListener("click", () => {
 // Mostrar campos de endereço se for entrega
 tipoEntregaRadios.forEach(radio => {
     radio.addEventListener("change", () => {
-        enderecoCampos.style.display = radio.value === "entrega" ? "block" : "none";
+        const selecionado = document.querySelector("input[name='tipoEntregaPopup']:checked").value;
+        enderecoCampos.style.display = selecionado === "entrega" ? "block" : "none";
     });
 });
 
@@ -130,10 +131,10 @@ document.getElementById("confirmarPedido").addEventListener("click", () => {
 
         // ---- Calcular taxa de entrega ----
         const bairrosComTaxa2 = [
-            "São Jose", "Urbens", "Vila dos Pescadores", "Antonio Lopez", "Bugia", "Centro",
+            "São José", "Urbens", "Vila dos Pescadores", "Antonio Lopez", "Bugia", "Centro",
             "Chácara do Atlântico", "Coabh", "Coabh 2", "Favica", "Floresta", "Guaxindimba",
             "Marcilio Dias 1", "Marcilio Dias 2", "Maria Manteiga", "Nossa Senhora Aparecida",
-            "Nova Bethânia", "Nova Esperança", "Novo Horizonte", "Quilombo Novo",
+            "Nova Betânia", "Nova Esperança", "Novo Horizonte", "Quilombo Novo",
             "Santiago", "Santo Amaro"
         ];
 
