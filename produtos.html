@@ -371,72 +371,81 @@
 </footer>
 
 <!-- POPUP -->
-<div id="popup" class="popup-content">
-  <span id="fecharPopup" class="fechar">&times;</span>
-  <h2>Finalizar Pedido</h2>
+<!-- POP-UP DE FINALIZAÇÃO -->
+<div id="popup" style="display: none;">
+  <div>
+    <h2>Finalizar Pedido</h2>
+    <button id="fecharPopup">❌</button>
 
-  <div class="entrega-tipo">
-    <label><input type="radio" name="tipoEntregaPopup" value="retirada" checked> Retirar na loja</label><br>
-    <label><input type="radio" name="tipoEntregaPopup" value="entrega"> Entregar</label>
+    <!-- Tipo de entrega -->
+    <div>
+      <label><input type="radio" name="tipoEntregaPopup" value="retirada" checked> Retirar na loja</label>
+      <label><input type="radio" name="tipoEntregaPopup" value="entrega"> Entrega</label>
+    </div>
+
+    <!-- Campos de endereço (só aparecem se for entrega) -->
+    <div id="enderecoCamposPopup" style="display: none;">
+      <label for="nomePopup">Nome:</label>
+      <input type="text" id="nomePopup" placeholder="Seu nome completo">
+
+      <label for="ruaPopup">Rua:</label>
+      <input type="text" id="ruaPopup" placeholder="Ex: Rua das Flores">
+
+      <label for="numeroPopup">Número:</label>
+      <input type="text" id="numeroPopup" placeholder="Ex: 123">
+
+      <label for="bairroPopup">Bairro:</label>
+      <select id="bairroPopup">
+        <option value="">Selecione o bairro</option>
+        <option value="Santana">Santana</option>
+        <option value="São Jose">São Jose</option>
+        <option value="Urbens">Urbens</option>
+        <option value="Vila dos Pescadores">Vila dos Pescadores</option>
+        <option value="Antonio Lopez">Antonio Lopez</option>
+        <option value="Bugia">Bugia</option>
+        <option value="Centro">Centro</option>
+        <option value="Chácara do Atlântico">Chácara do Atlântico</option>
+        <option value="Coabh">Coabh</option>
+        <option value="Coabh 2">Coabh 2</option>
+        <option value="Favica">Favica</option>
+        <option value="Floresta">Floresta</option>
+        <option value="Guaxindimba">Guaxindimba</option>
+        <option value="Marcilio Dias 1">Marcilio Dias 1</option>
+        <option value="Marcilio Dias 2">Marcilio Dias 2</option>
+        <option value="Maria Manteiga">Maria Manteiga</option>
+        <option value="Nossa Senhora Aparecida">Nossa Senhora Aparecida</option>
+        <option value="Nova Bethânia">Nova Bethânia</option>
+        <option value="Nova Esperança">Nova Esperança</option>
+        <option value="Novo Horizonte">Novo Horizonte</option>
+        <option value="Quilombo Novo">Quilombo Novo</option>
+        <option value="Santiago">Santiago</option>
+        <option value="Santo Amaro">Santo Amaro</option>
+      </select>
+
+      <label for="referenciaPopup">Ponto de referência:</label>
+      <input type="text" id="referenciaPopup" placeholder="Ex: Próximo à padaria do Zé">
+    </div>
+
+    <!-- Pagamento -->
+    <div>
+      <label for="pagamentoPopup">Forma de pagamento:</label>
+      <select id="pagamentoPopup">
+        <option value="">Selecione</option>
+        <option value="pix">Pix</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartão">Cartão</option>
+      </select>
+    </div>
+
+    <!-- Troco (só aparece se for dinheiro) -->
+    <div id="trocoDivPopup" style="display: none;">
+      <label for="trocoPopup">Troco para quanto?</label>
+      <input type="text" id="trocoPopup" placeholder="Ex: 50,00">
+    </div>
+
+    <!-- Botão confirmar -->
+    <button id="confirmarPedido">Confirmar Pedido</button>
   </div>
-
-  <div id="enderecoCamposPopup" class="hidden">
-    <h3>Endereço para Entrega</h3>
-    <label for="nomePopup">Nome:</label>
-    <input type="text" id="nomePopup" placeholder="Seu nome">
-
-    <label for="ruaPopup">Rua:</label>
-    <input type="text" id="ruaPopup" placeholder="Rua">
-
-    <label for="numeroPopup">Número:</label>
-    <input type="text" id="numeroPopup" placeholder="Número">
-
-    <label for="bairroPopup">Bairro:</label>
-<select id="bairroPopup" required>
-  <option value="">Selecione o bairro</option>
-  <option value="Santana">Santana</option>
-  <option value="São Jose">São José</option>
-  <option value="Urbens">Urbens</option>
-  <option value="Vila dos Pescadores">Vila dos Pescadores</option>
-  <option value="Antonio Lopez">Antonio Lopez</option>
-  <option value="Bugia">Bugia</option>
-  <option value="Centro">Centro</option>
-  <option value="Chácara do Atlântico">Chácara do Atlântico</option>
-  <option value="Coabh">Coabh</option>
-  <option value="Coabh 2">Coabh 2</option>
-  <option value="Favica">Favica</option>
-  <option value="Floresta">Floresta</option>
-  <option value="Guaxindimba">Guaxindimba</option>
-  <option value="Marcilio Dias 1">Marcilio Dias 1</option>
-  <option value="Marcilio Dias 2">Marcilio Dias 2</option>
-  <option value="Maria Manteiga">Maria Manteiga</option>
-  <option value="Nossa Senhora Aparecida">Nossa Senhora Aparecida</option>
-  <option value="Nova Bethânia">Nova Bethânia</option>
-  <option value="Nova Esperança">Nova Esperança</option>
-  <option value="Novo Horizonte">Novo Horizonte</option>
-  <option value="Quilombo Novo">Quilombo Novo</option>
-  <option value="Santiago">Santiago</option>
-  <option value="Santo Amaro">Santo Amaro</option>
-</select>
-
-    <label for="referenciaPopup">Referência:</label>
-    <input type="text" id="referenciaPopup" placeholder="Ponto de referência (opcional)">
-  </div>
-
-  <h3>Forma de Pagamento</h3>
-  <select id="pagamentoPopup">
-    <option value="">Selecione</option>
-    <option value="pix">Pix</option>
-    <option value="dinheiro">Dinheiro</option>
-    <option value="cartão">Cartão</option>
-  </select>
-
-  <div id="trocoDivPopup" class="hidden">
-    <label for="trocoPopup">Troco para:</label>
-    <input type="text" id="trocoPopup" placeholder="Ex: 50,00">
-  </div>
-
-  <button id="confirmarPedido">Confirmar Pedido</button>
 </div>
   <h1 class="txth1">TRADICIONAIS</h1>
 
